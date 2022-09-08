@@ -1,10 +1,11 @@
-import Home from "./components/home/Home";
+import Navbar from "./components/Navbar";
+
 
 
 function App() {
   return (
-    <div className="text-4xl font-bold font-signature">
-      <Home/>
+    <div >
+      <Navbar/>
     </div>
   );
 }
