@@ -1,9 +1,10 @@
+import Home from "./components/home/Home";
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Charlotte</h1>
+    <div className="text-4xl font-bold font-signature">
+      <Home/>
     </div>
   );
 }
