@@ -1,6 +1,6 @@
 import React from 'react'
 import {MdKeyboardArrowRight} from 'react-icons/md'
-import Chacha from '../assets/charlotte.jpeg'
+import Chacha from '../assets/chacha.jpeg'
 
 const Home = () => {
     return (
