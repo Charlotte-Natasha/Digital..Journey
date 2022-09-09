@@ -12,9 +12,9 @@ const Home = () => {
                     <p className='text-pink-50 py-4 max-w-md'> I currently enjoy working on web applications with technologies like React, Tailwind, Angular, Django and Next JS</p>
 
                     <div>
-                        <button className='text-pink-50 w-fill px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-purple-300 to-purple-900'>
+                        <button className='group text-pink-50 w-fill px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-purple-300 to-purple-900 cursor-pointer'>
                             Portfolio
-                            <span><MdKeyboardArrowRight/></span>
+                            <span className='group-hover:rotate-90 duration-300'><MdKeyboardArrowRight size={25} className='ml-1'/></span>
                         </button>
                     </div>
                 </div>
