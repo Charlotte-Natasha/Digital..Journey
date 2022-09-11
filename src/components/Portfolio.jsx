@@ -38,8 +38,8 @@ const Portfolio = () => {
                 <div key={id} className='shadow-md shadow-pink-600 rounded-lg'>
                     <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
                     <div className='flex items-center justify-center'>
-                        <a href={href} className='w-1/2 px-6 first-letter:py-3 m-4 duration-200 hover:scale-105'>Demo</a>
-                        <a href={code} className='w-1/2 px-6 first-letter:py-3 m-4 duration-200 hover:scale-105'>Code</a>
+                        <a href={href} target='blank' className='w-1/2 px-6 first-letter:py-3 m-4 duration-200 hover:scale-105'>Demo</a>
+                        <a href={code} target='blank' className='w-1/2 px-6 first-letter:py-3 m-4 duration-200 hover:scale-105'>Code</a>
                     </div>
                 </div>
 
