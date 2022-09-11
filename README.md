@@ -46,7 +46,7 @@ Install my-project with npm
   or
   yarn create-react-app 'name'
 
-  cd my-project
+  cd my-project-name
   
   npm start/ yarn start
   
