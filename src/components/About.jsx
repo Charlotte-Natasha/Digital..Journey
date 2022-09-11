@@ -8,12 +8,12 @@ const About = () => {
                 <p className='text-4xl font-bold inline border-b-4 border-black'>About</p>
             </div>
 
-            <p className='text-xl mt-20'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur, inventore dicta earum eveniet assumenda iste tempora vitae perferendis facere sapiente, odio beatae laborum porro quis optio aut facilis sed ipsum cupiditate non laudantium iure! Et fugit iusto laudantium itaque deserunt recusandae harum voluptatum libero similique quos? Beatae, velit a.</p>
+            <p className='text-xl mt-20'>I'm a full-stack web developer with a diploma in mechanical aeronautical engineering. In addition to my education, my experience has helped me become more proficient in a variety of areas, including web development, project management, aerodynamics and propulsion design, aircraft safety and management, equipment assembly, and installation, as well as cross-functional cooperation and relationship building. Additionally, I have the capacity to work well with a variety of teams while inspiring participants to deliver great reliability and the best goods and services. I'm also brave, realistic, and open-minded. I'm eager to pick up new abilities and meet obstacles in a diplomatic and constructive way. I believe that my flexibility and unrelenting dedication position me to contribute to your team's success.</p>
 
             <br />
 
             <p className='text-xl'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis laboriosam eligendi at. Dolore id reprehenderit distinctio ullam provident, ex iure quasi aperiam iusto mollitia, dolorum architecto rerum eos aut. Ratione autem repudiandae nesciunt? Nisi, culpa nulla facere, vitae dolorum commodi similique laboriosam accusamus, laudantium nesciunt iusto? Similique dolorum saepe ducimus!
+            With assurance, tenacity, and a laser-like concentration, I autonomously responds to operational and technological difficulties in order to deliver top-notch solutions and automation for seamless operations management. I am goal-oriented, driven, and possesses strong project management and team-leading skills. Excellent communication skills, adaptability, quick wit, proactive personality, and demonstrated ability to offer rational and useful solutions.
             </p>
         </div>
     </div>
