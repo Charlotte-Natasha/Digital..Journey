@@ -1,6 +1,7 @@
 import React from 'react'
 import {MdKeyboardArrowRight} from 'react-icons/md'
 import Chacha from '../assets/chacha.jpeg'
+import { Link } from 'react-scroll'
 
 const Home = () => {
     return (
@@ -12,10 +13,10 @@ const Home = () => {
                     <p className='text-pink-50 py-4 max-w-md'> I currently enjoy working on web applications with technologies like React, Tailwind, Angular, Django and Next JS</p>
 
                     <div>
-                        <button className='group text-pink-50 w-fill px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-purple-300 to-purple-900 cursor-pointer'>
+                        <Link to='portfolio' smooth duration={500} className='group text-pink-50 w-fill px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-300 to-purple-900 cursor-pointer'>
                             Portfolio
                             <span className='group-hover:rotate-90 duration-300'><MdKeyboardArrowRight size={25} className='ml-1'/></span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div>

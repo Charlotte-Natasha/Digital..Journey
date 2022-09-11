@@ -7,6 +7,7 @@ import tailwind from '../assets/tailwind.png'
 import github from '../assets/github.png'
 import angular from '../assets/angular.png'
 import nextjs from '../assets/nextjs.png'
+import django from '../assets/django.png'
 
 
 const Experience = () => {
@@ -46,7 +47,7 @@ const Experience = () => {
             id: 6,
             src: github,
             title: 'GitHub',
-            style: 'shadow-gray-600',
+            style: 'shadow-gray-500',
         },
         {
             id: 7,
@@ -55,12 +56,17 @@ const Experience = () => {
             style: 'shadow-orange-600',
         },
         {
-            id: 7,
+            id: 8,
             src: nextjs,
             title: 'Next JS',
             style: 'shadow-white',
         },
-
+        {
+            id: 9,
+            src: django,
+            title: 'Django',
+            style: 'shadow-green-400',
+        },
     ]
 
     return (
