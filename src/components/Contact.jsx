@@ -100,7 +100,7 @@ const Contact = () => {
             <div className="flex justify-end py-4">
                 <button
                 type="submit"
-                className='text-pink-100 bg-gradient-to-b from-purple-300 to-purple-900 cursor-pointer px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 group w-fill'
+                className='text-pink-100 bg-gradient-to-b from-pink-500 to-pink-900 cursor-pointer px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 group w-fill'
                 >
                 Let's Talk..
                 </button>
