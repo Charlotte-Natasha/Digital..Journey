@@ -5,20 +5,13 @@ module.exports = {
     extend: {},
     fontFamily: {
       signature: ['Great Vibes']
-    },
-    screens: {
-      'sm': '576px',
-      // => @media (min-width: 576px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '992px',
-      // => @media (min-width: 992px) { ... }
-
-      'xl': '1200px',
-      // => @media (min-width: 1200px) { ... }
-    },
+    }
   },
   plugins: [],
+  screens: {
+    'sm': {'min': '375px', 'max': '767px'},
+  'md': {'min': '768px', 'max': '991px'},
+  'lg': {'min': '992px', 'max': '1199px'},
+  'xl': {'min': '1200px'},
+  },
 }

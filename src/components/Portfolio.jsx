@@ -15,12 +15,14 @@ const Portfolio = () => {
         {
             id: 2,
             src: box,
-            href:''
+            href:'https://code--hub.herokuapp.com/',
+            code: 'https://github.com/Charlotte-Natasha/CodeHub'
         },
         {
             id: 3,
             src: photo,
-            href:''
+            href:'https://photo--box.herokuapp.com/',
+            code: 'https://github.com/Charlotte-Natasha/PHOTOBOX'
         },
     ]
 
