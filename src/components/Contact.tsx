@@ -2,8 +2,7 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <div
-            name="contact"
+        <div id="contact"
             className="h-screen w-full  bg-gradient-to-b from-black via-black to-pink-900"
         >
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
@@ -86,9 +85,8 @@ const Contact = () => {
                     </div>
                 </label>
                 <textarea
-                    maxLength="500"
-                    rows="4"
-                    type="text"
+                    maxLength={500}
+                    rows={4}
                     id="subject"
                     name="subject"
                     placeholder="Your message here"

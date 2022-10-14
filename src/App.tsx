@@ -1,12 +1,11 @@
+import React from 'react';
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
+import Home from "./components/Home";
 import Socials from "./components/Socials";
-
-
+import Contact from "./components/Contact";
 
 function App() {
   return (
