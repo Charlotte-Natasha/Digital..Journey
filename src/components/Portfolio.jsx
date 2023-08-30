@@ -1,30 +1,30 @@
 import React from 'react'
-import award from '../assets/portfolio/awwards.png' 
-import box from '../assets/portfolio/co.png' 
+import three from '../assets/portfolio/three.png' 
+import mitch from '../assets/portfolio/mitch.png' 
 import photo from '../assets/portfolio/Photobx.png' 
 
 const Portfolio = () => {
 
     const portfolios = [
-        {
-            id: 1,
-            src: award,
-            href:'https://awwward1.herokuapp.com/',
-            code:'https://github.com/Charlotte-Natasha/Awwards'
-        },
-        {
-            id: 2,
-            src: box,
-            href:'https://code--hub.herokuapp.com/',
-            code: 'https://github.com/Charlotte-Natasha/CodeHub'
-        },
-        {
-            id: 3,
-            src: photo,
-            href:'https://photo--box.herokuapp.com/',
-            code: 'https://github.com/Charlotte-Natasha/PHOTOBOX'
-        },
-    ]
+      {
+        id: 1,
+        src: three,
+        href: "https://3d-birthday-site.netlify.app/",
+        code: "https://github.com/Charlotte-Natasha/3D-portfolio",
+      },
+      {
+        id: 2,
+        src: mitch,
+        href: "https://michelleokello.netlify.app/",
+        code: "https://github.com/Charlotte-Natasha/Mitch-Journey",
+      },
+      {
+        id: 3,
+        src: photo,
+        href: "https://photo--box.herokuapp.com/",
+        code: "https://github.com/Charlotte-Natasha/PHOTOBOX",
+      },
+    ];
 
     return (
         <div id='portfolio' name='portfolio' className='w-full md:h-screen bg-gradient-to-b from-black via-black to-pink-900 text-pink-50'>

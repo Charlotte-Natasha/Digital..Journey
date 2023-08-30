@@ -6,8 +6,6 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Socials from "./components/Socials";
 
-
-
 function App() {
   return (
     <div >
