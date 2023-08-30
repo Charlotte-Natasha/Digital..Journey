@@ -1,7 +1,7 @@
 import React from 'react'
 import three from '../assets/portfolio/three.png' 
 import mitch from '../assets/portfolio/mitch.png' 
-import photo from '../assets/portfolio/Photobx.png' 
+import code from '../assets/portfolio/co.png' 
 
 const Portfolio = () => {
 
@@ -20,9 +20,9 @@ const Portfolio = () => {
       },
       {
         id: 3,
-        src: photo,
-        href: "https://photo--box.herokuapp.com/",
-        code: "https://github.com/Charlotte-Natasha/PHOTOBOX",
+        src: code,
+        href: "https://code--hub.herokuapp.com/",
+        code: "https://github.com/Charlotte-Natasha/CodeHub",
       },
     ];
 
