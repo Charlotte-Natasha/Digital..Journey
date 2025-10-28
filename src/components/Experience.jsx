@@ -31,7 +31,7 @@ const Experience = () => {
     });
 
     return (
-        <div name='experience' className='w-full pt-24 pb-24 bg-gradient-to-b from-black via-black to-pink-900 text-pink-50'>
+        <div name='experience' className='w-full pt-24 pb-24 bg-gradient-to-b to-black via-black from-pink-900 text-pink-50'>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full'>
                 
                 {/* Section Header */}

@@ -8,5 +8,24 @@
     "nav_about": "About",
     "nav_portfolio": "Portfolio",
     "nav_experience": "Experience",
-    "nav_contact": "Contact"
+    "nav_contact": "Contact",
+
+    "contact_title": "Contact Me",
+    "contact_subtitle": "Get in touch here.",
+    "form_label_firstname": "First name",
+    "form_label_lastname": "Last name",
+    "form_label_email": "Email",
+    "form_label_phone": "Phone",
+    "form_label_subject": "Subject",
+    "form_label_message": "Message",
+    "form_placeholder_phone": "+33000000",
+    "form_max_chars": "Max. 500 characters",
+    "form_label_message_placeholder": "Your message here",
+    "form_optional": "Optional",
+    "form_btn_submit": "Let's Talk..",
+    "form_ai_note": "💡 Note: This form submission is processed by a lightweight NLP Model to automatically classify the message topic, demonstrating practical Machine Learning deployment.",
+    
+    "status_sending": "Sending...",
+    "status_success": "Message sent successfully!",
+    "status_failed": "Failed to send message. Please try again."
 }

@@ -8,5 +8,35 @@
     "nav_about": "À Propos",
     "nav_portfolio": "Portfolio",
     "nav_experience": "Expérience",
-    "nav_contact": "Contact"
+    "nav_contact": "Contact",
+
+    "contact_title": "Contactez-Moi",
+    "contact_form_heading": "Discutons de Votre Projet",
+    "form_label_firstname": "Prénom",
+    "form_label_lastname": "Nom de famille",
+    "form_placeholder_email": "email@gmail.com", 
+    "form_placeholder_phone": "+330000000", 
+    "form_label_topic": "Sujet",
+    "form_label_message": "Votre message ici",
+    "form_btn_submit": "Discutons.",
+    "form_optional": "Optionnel",
+
+    "contact_title": "Contactez-Moi",
+    "contact_subtitle": "Contactez-moi ici.",
+    "form_label_firstname": "Prénom",
+    "form_label_lastname": "Nom de famille",
+    "form_label_email": "E-mail",
+    "form_label_phone": "Téléphone",
+    "form_label_subject": "Sujet",
+    "form_label_message": "Message",
+    "form_placeholder_phone": "+33000000",
+    "form_max_chars": "Max. 500 caractères",
+    "form_label_message_placeholder": "Votre message ici",
+    "form_optional": "Optionnel",
+    "form_btn_submit": "Discutons.",
+    "form_ai_note": "💡 Note : Ce formulaire est traité par un Modèle NLP léger pour classer automatiquement le sujet, démontrant une application pratique du Machine Learning.",
+
+    "status_sending": "Envoi en cours...",
+    "status_success": "Message envoyé avec succès !",
+    "status_failed": "Échec de l'envoi du message. Veuillez réessayer."
 }
