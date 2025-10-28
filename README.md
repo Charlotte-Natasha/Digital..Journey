@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# ✈️ My Portfolio: Aeronautical Precision Meets AI Innovation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌟 Introduction
 
-Currently, two official plugins are available:
+This portfolio showcases my transition from **Aeronautical Engineering** and mechanical maintenance to **Artificial Intelligence (AI)** and **Data Science**. It highlights foundational technical rigor and methodical problem-solving skills applied to modern data challenges, with a focus on improving mechanical system reliability and predictive maintenance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**The core theme is evolution: from wrenches to algorithms.**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+* **Multilingual (i18n):** Dynamically switches between **French (FR)** and **English (EN)** using `react-i18next`.
+* **Responsive Design:** Modern, high-contrast aesthetic built with **Tailwind CSS**.
+* **Narrative Focus:** Clearly articulates the bridge between the physical world of aeronautics and the digital world of AI.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This project is a modern, single-page application (SPA) built with the following core technologies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | **React** (Vite) | Component-based UI development. |
+| **Styling** | **Tailwind CSS** | Utility-first, responsive design. |
+| **Localization** | **react-i18next** | Manages multilingual content and switching. |
+| **Deployment** | **Netlify** | Continuous deployment (CI/CD). |
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Getting Started (Local Development)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To run this project locally, you need **Node.js** and a package manager (**npm** or **yarn**).
+
+1.  **Clone & Install:**
+    ```bash
+    git clone [YOUR GITHUB REPO URL HERE]
+    npm install 
+    ```
+
+2.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+The application will launch on your local host (typically `http://localhost:5173`).
+
+---
+
+## 🔗 Live Site & Contact
+
+* **Live Demo:** [INSERT NETLIFY LIVE URL HERE]
+* **Author:** Charlotte
+* **Connect:** [Your LinkedIn Profile Link]
+
+***
+*Driven by the pursuit of precision and innovation.*
