@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+@layer base{
+  html{
+    font-family: 'Kanit', sans-serif;
+  }
+}
+
+/* You would need to import a Google Font like 'Great Vibes' or 'The Nautigal' first */
+.font-signature {
+  font-family: 'Great Vibes', cursive;
+  /* Add an optional subtle text shadow for a soft glow effect */
+  text-shadow: 0 0 5px rgba(239, 148, 207, 0.5);
+}
+
+@import "tailwindcss";
