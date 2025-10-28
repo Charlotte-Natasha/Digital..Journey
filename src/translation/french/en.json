@@ -1,0 +1,12 @@
+{
+    "about_title": "About",
+    "about_paragraph_1": "With a degree in aeronautical engineering, I began my career in aircraft maintenance hangars, where I worked directly on engines, landing gear, and mechanical systems. Those years spent handling tools, following safety procedures, and diagnosing technical problems taught me the rigor, method, and patience that are essential qualities in any technological environment.",
+    "about_paragraph_2": "It was this same curiosity for precision and performance that led me to turn to computer development and artificial intelligence. Today, as I pursue a bachelor's degree in Artificial Intelligence and Data Science at EPSI Montpellier, I am exploring how data and machine learning can transform the maintenance, design, and efficiency of technical systems.",
+    "about_paragraph_3": "My ambition is to build a bridge between the physical world of aeronautics and the digital world of AI, using data to improve reliability, fault prediction, and the sustainability of mechanical systems. This transition is not a change of direction, but a natural evolution—from wrenches to algorithms, always driven by the same engine: the pursuit of precision and innovation." ,
+
+    "nav_home": "Home",
+    "nav_about": "About",
+    "nav_portfolio": "Portfolio",
+    "nav_experience": "Experience",
+    "nav_contact": "Contact"
+}
