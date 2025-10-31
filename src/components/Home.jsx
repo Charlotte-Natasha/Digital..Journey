@@ -31,7 +31,7 @@ const Home = () => {
               </h2>
               <p className="text-pink-50 text-sm sm:text-base leading-relaxed">
                 I am a <b className="text-pink-100">BAC+3 student in AI and Data Science</b> at EPSI Montpellier. 
-                Currently pursuing an <b className="text-pink-100">apprenticeship (2 weeks in/2 weeks school)</b>, 
+                Currently pursuing an <b className="text-pink-100">apprenticeship (1 week in school/3 weeks school at the company)</b>, 
                 I am dedicated to developing solid competencies in <b className="text-pink-100">data analysis</b>, 
                 intelligent automation, and <b className="text-pink-100">model deployment</b> to contribute to 
                 high-impact technological projects.

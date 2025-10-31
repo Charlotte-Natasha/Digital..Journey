@@ -1,7 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-// Removed: import emailjs from "@emailjs/browser";
-// Removed: import { useRef, useState } from "react";
 
 const Contact = () => {
   const { t } = useTranslation();

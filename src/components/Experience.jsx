@@ -1,94 +1,135 @@
-import React, { useState } from 'react';
-import { HiSearch, HiOutlineDocumentText } from 'react-icons/hi';
-// 👇 Import the structured project data
-import { projectsData } from '../data/projectData.jsx'; 
+import React from 'react';
 
-// This helper component will show the Schema when the user clicks the button
-const SchemaModal = ({ schema }) => (
-    <div className="mt-4 p-3 bg-gray-900 border border-pink-700 rounded-lg text-xs text-pink-200">
-        <p className="font-bold mb-1 underline">Conceptual Data Schema (Apache Format):</p>
-        {schema.map((item, index) => (
-            <p key={index} className="pl-2">
-                - {item.field}: **{item.type}** (Encoding: {item.format})
-            </p>
-        ))}
-    </div>
-);
+const skillsData = [
+    {
+        category: "DATA SCIENCE & PROG.",
+        items: ["Python (Scikit-learn, Pandas, Plotly)", "Machine Learning/NLP", "Analyse de données"]
+    },
+    {
+        category: "DÉVELOPPEMENT & OUTILS",
+        items: ["React/Vite, Node.js", "Django/Flask, SQL", "Firebase/Google Cloud"]
+    },
+    {
+        category: "COMPÉTENCES TRANSFÉRABLES",
+        items: ["Rigueur Analytique", "Gestion de Projet (Agile)", "Esprit Critique"]
+    }
+];
 
+// Séparation des données pour deux sections distinctes
+const aviationExperience = [
+    {
+        company: "BlueBird Aviation",
+        duration: "Mars ‘19 à Juin ‘21",
+        title: "Technicienne Aéronautique",
+        location: "Aéroport Wilson, Nairobi",
+        tasks: [
+            "Application stricte des procédures de maintenance et des réglementations (DGAC).",
+            "Participation aux formations de sécurité et de maintenance.",
+            "Inspections pré-vol et structurales (fuselage, ailes, moteurs).",
+        ]
+    },
+    {
+        company: "East African Air Charters",
+        duration: "Janvier à Mars ‘17",
+        title: "Stage (Internship)",
+        location: "Aéroport Wilson, Nairobi",
+        tasks: [
+            "Maintenance curative, corrective et préventive (roues/freins) sur Cessna et Piper.",
+            "Contrôle, test et diagnostic des équipements embarqués.",
+            "Exécution des interventions selon la documentation technique (CMM).",
+        ]
+    },
+];
 
+const extraProfessionalActivities = [
+    {
+        company: "Cajigo",
+        duration: "Juillet ‘23 - Jan ’25",
+        title: "Responsable des médias sociaux",
+        location: "En ligne (UK)",
+        tasks: [
+            "Automatisation de la planification de contenu pour l'efficacité opérationnelle.",
+            "Rédaction et structuration de contenu LinkedIn ciblé (renforcement des compétences de reporting).",
+        ]
+    },
+    {
+        company: "GG Care",
+        duration: "Août ‘23 - Déc ‘23",
+        title: "Développeur Backend Junior",
+        location: "En ligne (UK)",
+        tasks: [
+            "Développement d'interactions vocales pour IHM intuitives et critiques.",
+            "Gestion d'états d'interface en temps réel pour des retours utilisateurs fiables (analogie cockpit).",
+        ]
+    },
+];
+
+// Le composant Experience utilise désormais les deux listes séparées.
 const Experience = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [activeSchemaId, setActiveSchemaId] = useState(null);
-
-    // RAG/Retrieval Simulation Logic
-    const filteredProjects = projectsData.filter(project => {
-        if (searchTerm === '') return true;
-        const query = searchTerm.toLowerCase();
-        
-        // Search across title and 'vector_tags' (keywords)
-        return project.title.toLowerCase().includes(query) || 
-                project.keywords.some(tag => tag.toLowerCase().includes(query));
-    });
+    
+    // Fonction utilitaire pour rendre les blocs d'expérience
+    const renderExperienceBlocks = (data) => (
+        <div className='space-y-12'>
+            {data.map((job, index) => (
+                <div key={index} className='p-6 rounded-xl bg-pink-900/40 border border-pink-700 shadow-xl transition-all duration-300 hover:border-pink-500'>
+                    <div className='flex justify-between items-start flex-wrap mb-2'>
+                        <h3 className='text-2xl font-bold text-white'>{job.company}</h3>
+                        <p className='text-md font-medium text-pink-300 italic'>{job.duration}</p>
+                    </div>
+                    
+                    <div className='text-pink-200 mb-4'>
+                        <p className='font-semibold'>{job.title}</p>
+                        <p className='text-sm italic'>{job.location}</p>
+                    </div>
+                    
+                    <ul className='list-disc pl-5 space-y-2 text-gray-300'>
+                        {job.tasks.map((task, i) => (
+                            <li key={i} className='text-base'>{task}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    );
 
     return (
-        <div name='experience' className='w-full pt-24 pb-24 bg-gradient-to-b to-black via-black from-pink-900 text-pink-50'>
+        <div name='experience' className='w-full min-h-screen pt-24 pb-24 bg-gradient-to-b to-black via-black from-pink-900 text-pink-50'>
             <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full'>
                 
                 {/* Section Header */}
                 <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-pink-500'>Experience & Expertise</p>
+                    <p className='text-4xl font-bold inline border-b-4 border-pink-500'>Compétences & Expérience</p>
                     <p className='py-6 text-xl text-pink-200'>
-                        Search my projects below to see specific skills and how I structure data (RAG Concept).
+                        Aperçu de mon expertise technique et de mon parcours professionnel.
                     </p>
                 </div>
                 
-                {/* 🎯 Skill Retrieval Search Bar (RAG Simulation) */}
-                <div className='flex items-center w-full md:w-1/2 mb-10 border-b-2 border-pink-500'>
-                    <HiSearch size={25} className='text-pink-300 mr-2' />
-                    <input
-                        type='text'
-                        placeholder='Search keywords (e.g., "RAG", "Classification", "Parquet")'
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className='bg-transparent border-none w-full text-pink-100 placeholder-pink-300 focus:outline-none py-2'
-                    />
-                </div>
-
-                {/* PROJECT CARDS - Displaying filtered results */}
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 py-8'>
-                    {filteredProjects.map((project) => (
-                        <div key={project.id} className='shadow-xl p-6 rounded-xl bg-pink-900/40 border border-pink-700 hover:border-pink-500 duration-300'>
-                            
-                            <h3 className='text-2xl font-bold text-white mb-2'>{project.title}</h3>
-                            <p className='text-pink-200 mb-4 italic'>{project.subtitle}</p>
-                            <p className='text-gray-300 mb-4'>{project.description}</p>
-
-                            <div className='flex flex-wrap gap-2 text-sm mb-4'>
-                                {project.keywords.map((tag, index) => (
-                                    <span key={index} className='px-3 py-1 bg-pink-600 rounded-full text-xs text-white'>
-                                        {tag}
-                                    </span>
+                {/* --- 1. SKILLS SECTION (COMPÉTENCES) --- */}
+                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>Compétences Clés</h2>
+                <div className='grid md:grid-cols-3 gap-8 mb-16'>
+                    {skillsData.map((section, index) => (
+                        <div key={index} className='p-6 rounded-xl bg-pink-900/40 border border-pink-700 shadow-lg'>
+                            <h3 className='text-lg font-bold text-pink-300 mb-4 uppercase tracking-wider'>{section.category}</h3>
+                            <ul className='space-y-2'>
+                                {section.items.map((item, i) => (
+                                    <li key={i} className='flex items-start text-gray-200 text-base'>
+                                        <span className='text-pink-500 mr-2'>&#9733;</span> {/* Star icon for bullet */}
+                                        {item}
+                                    </li>
                                 ))}
-                            </div>
-
-                            {/* 🎯 Schema/Apache Concept Button */}
-                            <button 
-                                onClick={() => setActiveSchemaId(project.id === activeSchemaId ? null : project.id)}
-                                className='flex items-center text-sm font-semibold text-pink-300 hover:text-white transition-colors duration-200'
-                            >
-                                <HiOutlineDocumentText size={18} className='mr-1' />
-                                View Data Schema Concept
-                            </button>
-
-                            {/* Schema Modal Display */}
-                            {activeSchemaId === project.id && <SchemaModal schema={project.input_data_schema} />}
+                            </ul>
                         </div>
                     ))}
-                    
-                    {filteredProjects.length === 0 && (
-                        <p className="text-pink-300 text-lg">No projects match your current search query. Try keywords like 'RAG' or 'Python'.</p>
-                    )}
                 </div>
+
+                {/* --- 2. PROFESSIONAL EXPERIENCE SECTION (EXPÉRIENCE PROFESSIONNELLE) --- */}
+                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>Expérience Professionnelle - Hors Tech</h2>
+                {renderExperienceBlocks(aviationExperience)}
+                
+                {/* --- 3. EXTRA-PROFESSIONAL ACTIVITIES SECTION (ACTIVITÉS EXTRA-PROFESSIONNELLES) --- */}
+                <h2 className='text-3xl font-semibold text-white mt-12 mb-6 border-l-4 border-pink-500 pl-3'>Activites Extra-Professionnelle - Tech</h2>
+                {renderExperienceBlocks(extraProfessionalActivities)}
+
             </div>
         </div>
     );
