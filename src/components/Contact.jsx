@@ -1,11 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation();
-  // Removed: const form = useRef();
-  // Removed: const [status, setStatus] = useState("");
-  // Removed: const sendEmail = (e) => { ... };
+  // State to track the form submission status: null, 'sending', 'success', 'error'
+  const [status, setStatus] = useState(null); 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending'); // Set status to show loading/processing
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    // CRUCIAL: Serialize data for Netlify's endpoint
+    const encoded = new URLSearchParams(data).toString();
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded,
+      });
+
+      // Netlify will return status 204 for a successful submission without a redirect
+      if (response.status === 200 || response.status === 204) {
+        setStatus('success'); 
+        form.reset(); // Clear the form
+        // Optional: Reset status after a few seconds
+        setTimeout(() => setStatus(null), 5000); 
+      } else {
+        setStatus('error');
+        console.error("Netlify submission failed with status:", response.status);
+      }
+    } catch (error) {
+      setStatus('error');
+      console.error("Form submission error:", error);
+    }
+  };
+
 
   return (
     <div
@@ -29,17 +62,18 @@ const Contact = () => {
 
         {/* NETLIFY FORM CONFIGURATION */}
         <form 
-          name="contact_form"                      // 1. Unique name for Netlify
-          method="POST"                           // 2. Must be POST
-          data-netlify="true"                     // 3. Enables Netlify Forms
-          netlify-honeypot="bot-field"            // 4. Spam protection
+          name="contact_form" 
+          method="POST" 
+          data-netlify="true"
+          onSubmit={handleSubmit} // <-- AJAX HANDLER
           className="p-6"
         >
-          {/* Hidden fields for Netlify and spam protection */}
+          
+          {/* Hidden fields for Netlify and spam protection (CRUCIAL for detection and filtering) */}
           <input type="hidden" name="form-name" value="contact_form" />
           <input type="hidden" name="bot-field" /> 
           
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 text-pink-100">
             
             {/* First Name */}
             <div className="flex flex-col">
@@ -49,7 +83,7 @@ const Contact = () => {
                 id="first-name"
                 name="user_firstname"
                 placeholder={t('form_label_firstname')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
@@ -62,7 +96,7 @@ const Contact = () => {
                 id="last-name"
                 name="user_lastname"
                 placeholder={t('form_label_lastname')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
@@ -75,7 +109,7 @@ const Contact = () => {
                 id="email"
                 name="user_email"
                 placeholder="email@gmail.com"
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
@@ -83,9 +117,9 @@ const Contact = () => {
             {/* Phone */}
             <div className="flex flex-col">
               <label htmlFor="phone">
-                <div className="flex align-items">
+                <div className="flex justify-between">
                   {t('form_label_phone')}
-                  <span className="ml-auto opacity-75 text-pink-500">{t('form_optional')}</span>
+                  <span className="opacity-75 text-pink-500 text-sm">{t('form_optional')}</span>
                 </div>
               </label>
               <input
@@ -93,7 +127,7 @@ const Contact = () => {
                 id="phone"
                 name="user_phone"
                 placeholder={t('form_placeholder_phone')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
             
@@ -105,7 +139,7 @@ const Contact = () => {
                 id="subject"
                 name="subject"
                 placeholder={t('form_label_subject')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
@@ -113,9 +147,9 @@ const Contact = () => {
             {/* Message */}
             <div className="flex flex-col col-span-2">
               <label htmlFor="message">
-                <div className="flex align-items">
+                <div className="flex justify-between">
                   {t('form_label_message')}
-                  <span className="ml-auto opacity-75">{t('form_max_chars')}</span>
+                  <span className="opacity-75 text-sm">{t('form_max_chars')}</span>
                 </div>
               </label>
               <textarea
@@ -124,20 +158,44 @@ const Contact = () => {
                 id="message"
                 name="message"
                 placeholder={t('form_label_message_placeholder')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50"
+                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
           </div>
           
-          {/* Submit Button */}
-          <div className="flex justify-end py-4">
+          {/* Submit Button & Status Messages */}
+          <div className="flex flex-col items-center py-4">
+            
+            {/* Conditional Button Text/Styling */}
             <button
               type="submit"
-              className="text-pink-100 bg-gradient-to-b from-pink-500 to-pink-900 cursor-pointer px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 group w-fill"
+              disabled={status === 'sending'} 
+              className={`
+                text-pink-100 cursor-pointer px-6 py-3 my-4 mx-auto flex items-center rounded-md duration-300 w-full md:w-fit
+                ${status === 'sending' 
+                    ? 'bg-gray-600 cursor-not-allowed' // Grey out while sending
+                    : 'bg-gradient-to-b from-pink-500 to-pink-900 hover:scale-105'
+                }
+              `}
             >
-              {t('form_btn_submit')}
+              {status === 'sending' ? t('form_btn_sending') : t('form_btn_submit')}
             </button>
+
+            {/* In-Page Success Message */}
+            {status === 'success' && (
+              <p className="text-center text-lg font-bold text-green-400 mt-2">
+                {t('form_success_message')} 
+              </p>
+            )}
+
+            {/* In-Page Error Message */}
+            {status === 'error' && (
+              <p className="text-center text-lg font-bold text-red-500 mt-2">
+                {t('form_error_message')} 
+              </p>
+            )}
+
           </div>
           
         </form>
