@@ -23,11 +23,11 @@ const Contact = () => {
         body: encoded,
       });
 
-      // Netlify will return status 204 for a successful submission without a redirect
+      // Netlify often returns status 204 (No Content) for successful AJAX submissions
       if (response.status === 200 || response.status === 204) {
         setStatus('success'); 
         form.reset(); // Clear the form
-        // Optional: Reset status after a few seconds
+        // Reset status after a few seconds
         setTimeout(() => setStatus(null), 5000); 
       } else {
         setStatus('error');
@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full bg-gradient-to-b from-black via-black to-pink-900"
+      className="w-full bg-gradient-to-b from-black via-black to-pink-900 py-12"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center">
         <div className="pb-2 text-pink-100">
@@ -69,11 +69,12 @@ const Contact = () => {
           className="p-6"
         >
           
-          {/* Hidden fields for Netlify and spam protection (CRUCIAL for detection and filtering) */}
+          {/* Hidden fields for Netlify and spam protection (CRUCIAL) */}
           <input type="hidden" name="form-name" value="contact_form" />
-          <input type="hidden" name="bot-field" /> 
+          {/* Honeypot field: Type text and hide it with Tailwind (more robust against simple bots) */}
+          <input type="text" name="bot-field" className="hidden" aria-hidden="true" /> 
           
-          <div className="grid grid-cols-2 gap-4 text-pink-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pink-100">
             
             {/* First Name */}
             <div className="flex flex-col">
@@ -85,6 +86,7 @@ const Contact = () => {
                 placeholder={t('form_label_firstname')}
                 className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
+                autoComplete="given-name" // 💡 ADDED autocomplete
               />
             </div>
             
@@ -98,6 +100,7 @@ const Contact = () => {
                 placeholder={t('form_label_lastname')}
                 className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
+                autoComplete="family-name" // 💡 ADDED autocomplete
               />
             </div>
             
@@ -111,6 +114,7 @@ const Contact = () => {
                 placeholder="email@gmail.com"
                 className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
+                autoComplete="email" // 💡 ADDED autocomplete
               />
             </div>
             
@@ -128,6 +132,7 @@ const Contact = () => {
                 name="user_phone"
                 placeholder={t('form_placeholder_phone')}
                 className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                autoComplete="tel" // 💡 ADDED autocomplete
               />
             </div>
             
@@ -182,7 +187,7 @@ const Contact = () => {
               {status === 'sending' ? t('form_btn_sending') : t('form_btn_submit')}
             </button>
 
-            {/* In-Page Success Message */}
+            {/* In-Page Success Message (Will now display the correct translation) */}
             {status === 'success' && (
               <p className="text-center text-lg font-bold text-green-400 mt-2">
                 {t('form_success_message')} 
@@ -191,7 +196,7 @@ const Contact = () => {
 
             {/* In-Page Error Message */}
             {status === 'error' && (
-              <p className="text-center text-lg font-bold text-red-500 mt-2">
+              <p className="text-center text-lg font-bold text-pink-300 mt-2">
                 {t('form_error_message')} 
               </p>
             )}

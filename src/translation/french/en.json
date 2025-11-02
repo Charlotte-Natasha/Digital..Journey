@@ -1,4 +1,9 @@
 {
+    "title": "Work-Study - AI AND DATA SCIENCE DEVELOPER",
+    "description_part1": "I am actively seeking a work-study/apprenticeship starting **immediately** (1 week at school / 1 week at the company) to fulfill my third-year bachelor's degree in AI and Data Science at **EPSI Montpellier**.",
+    "description_part2": "As a graduate in **Aeronautical Engineering**, I am dedicated to developing solid competencies in **data analysis**, intelligent automation, and **model deployment** to contribute to high-impact technological projects.",
+    "button_label": "Portfolio" ,
+
     "about_title": "About",
     "about_paragraph_1": "With a degree in aeronautical engineering, I began my career in aircraft maintenance hangars, where I worked directly on engines, landing gear, and mechanical systems. Those years spent handling tools, following safety procedures, and diagnosing technical problems taught me the rigor, method, and patience that are essential qualities in any technological environment.",
     "about_paragraph_2": "It was this same curiosity for precision and performance that led me to turn to computer development and artificial intelligence. Today, as I pursue a bachelor's degree in Artificial Intelligence and Data Science at EPSI Montpellier, I am exploring how data and machine learning can transform the maintenance, design, and efficiency of technical systems.",
@@ -26,6 +31,148 @@
     "form_ai_note": "💡 Note: This form submission is processed by a lightweight NLP Model to automatically classify the message topic, demonstrating practical Machine Learning deployment.",
     
     "status_sending": "Sending...",
-    "status_success": "Message sent successfully!",
-    "status_failed": "Failed to send message. Please try again."
+    "form_success_message": "Message sent successfully!", 
+    "form_error_message": "An error occurred. Please try again later.",
+
+
+    "portfolio_title": "AI & Tech Projects Portfolio",
+    "portfolio_subtitle": "Explore my projects. The **AI Relevance Score** (simulated) is displayed to highlight the most technical projects.",
+    "portfolio_btn_demo": "Demo",
+    "portfolio_btn_code": "Code",
+    
+    "relevance_level_base": "Base (Dev)",
+    "relevance_level_medium": "Medium (Analysis/3D)",
+    "relevance_level_high": "High (AI/ML)",
+    
+    "projects": [
+    {
+        "id": 1,
+        "title": "Aircraft Performance and Engine Type Prediction",
+        "teaser": "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Strong focus on **Machine Learning**."
+    },
+    {
+        "id": 2,
+        "title": "Aircraft Crash Data Analysis",
+        "teaser": "Project showcases data wrangling, interactive visualization, and clustering skills. Demonstrates **Data Analysis** competencies."
+    },
+    {
+        "id": 3,
+        "title": "3D Birthday Portfolio Site",
+        "teaser": "Interactive portfolio using Three.js and Vite. **3D Web Development** project."
+    },
+    {
+        "id": 4,
+        "title": "Code-Hub Social Platform",
+        "teaser": "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys."
+    },
+    {
+        "id": 5,
+        "title": "Michelle's Portfolio Website",
+        "teaser": "Showcasing Michelle Okello's projects and skills. **Frontend Development** project."
+    }
+    ],
+
+    "exp_title": "Skills & Experience",
+    "exp_subtitle": "Overview of my technical expertise and professional journey.",
+    "exp_skills_header": "Key Skills",
+    "exp_aviation_header": "Professional Experience - Non-Tech",
+    "exp_extracurricular_header": "Extra-Professional Activities - Tech",
+    "form_error_message": "An error occurred. Please try again later.",
+    
+    "skillsData": [
+    {
+        "category": "DATA SCIENCE & PROG.",
+        "items": ["Python (Scikit-learn, Pandas, Plotly)", "Machine Learning/NLP", "Data Analysis"]
+    },
+    {
+        "category": "DEVELOPMENT & TOOLS",
+        "items": ["React/Vite, Node.js", "Django/Flask, SQL", "Firebase/Google Cloud"]
+    },
+    {
+        "category": "TRANSFERABLE SKILLS",
+        "items": ["Analytical Rigor", "Project Management (Agile)", "Critical Thinking"]
+    }
+    ],
+    "aviationExperience": [
+    {
+        "company": "BlueBird Aviation",
+        "duration": "Mar ‘19 to Jun ‘21",
+        "title": "Aeronautical Technician",
+        "location": "Wilson Airport, Nairobi",
+        "tasks": [
+            "Strict application of maintenance procedures and regulations (DGAC).",
+            "Participation in safety and maintenance training.",
+            "Pre-flight and structural inspections (fuselage, wings, engines)."
+        ]
+    },
+    {
+        "company": "East African Air Charters",
+        "duration": "Jan to Mar ‘17",
+        "title": "Internship",
+        "location": "Wilson Airport, Nairobi",
+        "tasks": [
+            "Curative, corrective, and preventive maintenance (wheels/brakes) on Cessna and Piper.",
+            "Control, testing, and diagnostics of on-board equipment.",
+            "Execution of interventions according to technical documentation (CMM)."
+        ]
+    }
+    ],
+    "extraProfessionalActivities": [
+    {
+        "company": "Cajigo",
+        "duration": "Jul ‘23 - Jan ’25",
+        "title": "Social Media Manager",
+        "location": "Online (UK)",
+        "tasks": [
+            "Content planning automation for operational efficiency.",
+            "Writing and structuring targeted LinkedIn content (strengthening reporting skills)."
+        ]
+    },
+    {
+        "company": "GG Care",
+        "duration": "Aug ‘23 - Dec ‘23",
+        "title": "Junior Backend Developer",
+        "location": "Online (UK)",
+        "tasks": [
+            "Development of voice interactions for intuitive and critical HMI.",
+            "Real-time interface state management for reliable user feedback (cockpit analogy)."
+        ]
+    }
+    ],
+    "portfolio_title": "AI & Tech Projects Portfolio",
+    "portfolio_subtitle": "Explore my projects. The **AI Relevance Score** (simulated) is displayed to highlight the most technical projects.",
+    "portfolio_btn_demo": "Demo",
+    "portfolio_btn_code": "Code",
+    
+    "relevance_level_base": "Base (Dev)",
+    "relevance_level_medium": "Medium (Analysis/3D)",
+    "relevance_level_high": "High (AI/ML)",
+    
+    "projects": [
+        {
+        "id": 1,
+        "title": "Aircraft Performance and Engine Type Prediction",
+        "teaser": "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Strong focus on **Machine Learning**."
+    },
+    {
+        "id": 2,
+        "title": "Aircraft Crash Data Analysis",
+        "teaser": "Project showcases data wrangling, interactive visualization, and clustering skills. Demonstrates **Data Analysis** competencies."
+    },
+    {
+        "id": 3,
+        "title": "3D Birthday Portfolio Site",
+        "teaser": "Interactive portfolio using Three.js and Vite. **3D Web Development** project."
+    },
+    {
+        "id": 4,
+        "title": "Code-Hub Social Platform",
+        "teaser": "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys."
+    },
+    {
+        "id": 5,
+        "title": "Michelle's Portfolio Website",
+        "teaser": "Showcasing Michelle Okello's projects and skills. **Frontend Development** project."
+    }
+    ]
 }

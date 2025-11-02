@@ -30,8 +30,8 @@ const Home = () => {
                 Alternance - DÉVELOPPEUR IA ET DATA SCIENCE
               </h2>
               <p className="text-pink-50 text-sm sm:text-base leading-relaxed">
-                I am a <b className="text-pink-100">BAC+3 student in AI and Data Science</b> at EPSI Montpellier. 
-                Currently pursuing an <b className="text-pink-100">apprenticeship (1 week in school/3 weeks school at the company)</b>, 
+                I am a <b className="text-pink-100">actively seeking a work-study/apprenticeship starting immediately(1 week at school/1 week at            the company) </b> to fulfill my third year bachelor's degree in AI and Data Science <b className="text-pink-100">EPSI Montpellier</b>. 
+                As a graduate in <b className="text-pink-100">Aeronautical Engineering </b>, 
                 I am dedicated to developing solid competencies in <b className="text-pink-100">data analysis</b>, 
                 intelligent automation, and <b className="text-pink-100">model deployment</b> to contribute to 
                 high-impact technological projects.

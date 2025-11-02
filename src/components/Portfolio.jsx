@@ -7,9 +7,9 @@ import piston from "../assets/portfolio/piston.png";
 
 // --- DATA PROCESSING / FEATURE ENGINEERING FOR PORTFOLIO ---
 /**
- * Prépare la pile technologique pour l'analyse (transforme les chaînes en tableaux).
- * @param {Array | string} stack - La pile technologique.
- * @returns {Array} La pile technologique comme tableau de chaînes.
+
+ * @param {Array | string} stack 
+ * @returns {Array} 
  */
 const normalizeTechStack = (stack) => {
     if (Array.isArray(stack)) return stack;
@@ -19,22 +19,19 @@ const normalizeTechStack = (stack) => {
     return [];
 };
 
-/**
- * Simule un pipeline de traitement de données pour les projets.
- * Analyse le teaser et la pile technologique pour assigner un score de pertinence IA/ML.
- */
+
 const processProjectData = (data) => {
     return data.map(project => {
         let level = 'Base (Dev)';
         let color = 'bg-pink-600';
 
-        // Normalisation de la pile tech pour l'analyse
+        
         const techStackArray = normalizeTechStack(project.techStack);
         
-        // Combinaison et conversion en minuscules pour l'analyse
+        
         const content = project.teaser.toLowerCase() + ' ' + techStackArray.join(' ').toLowerCase();
 
-        // Logique d'attribution de pertinence
+        
         if (content.includes('machine learning') || content.includes('nlp') || content.includes('prediction') || content.includes('scikit-learn')) {
             level = 'Élevée (AI/ML)';
             color = 'bg-green-600';
@@ -45,7 +42,7 @@ const processProjectData = (data) => {
         
         return {
             ...project,
-            techStack: techStackArray, // Utilise le tableau normalisé
+            techStack: techStackArray, 
             relevanceLevel: level,
             relevanceColor: color,
         };
@@ -55,7 +52,7 @@ const processProjectData = (data) => {
 
 const Portfolio = () => {
     
-    // Données brutes des projets
+    
     const rawPortfolios = [
         {
             id: 1,
@@ -91,7 +88,7 @@ const Portfolio = () => {
             src: code, 
             title: "Code-Hub Social Platform",
             teaser: "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys.",
-            techStack: "Python, Django, PostgreSQL", // Sera normalisé
+            techStack: "Python, Django, PostgreSQL", 
             href: "https://code--hub.herokuapp.com/",
             code: "https://github.com/Charlotte-Natasha/CodeHub",
         },
@@ -100,13 +97,13 @@ const Portfolio = () => {
             src: mitch, 
             title: "Michelle's Portfolio Website",
             teaser: "Showcasing Michelle Okello's projects and skills. Projet de **développement Frontend**.",
-            techStack: "React, Tailwind CSS", // Sera normalisé
+            techStack: "React, Tailwind CSS", 
             href: "https://michelleokello.netlify.app/",
             code: "https://github.com/Charlotte-Natasha/Mitch-Journey",
         },
     ];
 
-    // Traitement des données par le pipeline simulé
+    
     const processedPortfolios = processProjectData(rawPortfolios);
 
 
@@ -135,7 +132,7 @@ const Portfolio = () => {
                             <div className="p-4 flex-grow">
                                 <div className="flex justify-between items-start mb-2">
                                     <h3 className="text-xl font-semibold text-white">{title}</h3>
-                                    {/* Score de Pertinence IA Visible */}
+                                    {/* Scores */}
                                     <span 
                                         className={`flex-shrink-0 ml-3 px-2 py-1 text-xs font-bold rounded-full text-white ${relevanceColor}`}
                                     >
@@ -159,7 +156,7 @@ const Portfolio = () => {
                                 {/* Image Placeholder */}
                                 <div className="w-full h-40 bg-gray-800 flex items-center justify-center rounded-md mt-2">
                                     <img 
-                                      src={src} alt={title} className="w-full h-40 object-cover rounded-md mt-2" />
+                                        src={src} alt={title} className="w-full h-40 object-cover rounded-md mt-2" />
                                 </div>
                             </div>
 
