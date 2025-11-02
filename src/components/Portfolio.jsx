@@ -4,6 +4,8 @@ import mitch from "../assets/portfolio/mitch.png";
 import code from "../assets/portfolio/co.png";
 import crash from "../assets/portfolio/crashes.png";
 import piston from "../assets/portfolio/piston.png";
+import { useTranslation } from "react-i18next";
+
 
 // --- DATA PROCESSING / FEATURE ENGINEERING FOR PORTFOLIO ---
 /**
@@ -19,7 +21,6 @@ const normalizeTechStack = (stack) => {
     return [];
 };
 
-
 const processProjectData = (data) => {
     return data.map(project => {
         let level = 'Base (Dev)';
@@ -33,10 +34,10 @@ const processProjectData = (data) => {
 
         
         if (content.includes('machine learning') || content.includes('nlp') || content.includes('prediction') || content.includes('scikit-learn')) {
-            level = 'Élevée (AI/ML)';
-            color = 'bg-green-600';
+            level = 'High (AI/ML)'; 
+            color = 'bg-pink-600';
         } else if (content.includes('data cleaning') || content.includes('visualization') || content.includes('analysis') || content.includes('three.js')) {
-            level = 'Moyenne (Analyse/3D)';
+            level = 'Medium (Analysis/3D)'; 
             color = 'bg-yellow-600';
         } 
         
@@ -52,6 +53,7 @@ const processProjectData = (data) => {
 
 const Portfolio = () => {
     
+    const { t } = useTranslation();
     
     const rawPortfolios = [
         {
@@ -59,7 +61,7 @@ const Portfolio = () => {
             src: piston, 
             title: "Aircraft Performance and Engine Type Prediction ",
             teaser:
-                "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Forte composante de **Machine Learning**.",
+                "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Strong **Machine Learning** component.", 
             techStack: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
             href: "https://colab.research.google.com/drive/1wDw6D7rXknG1pwsmiBI9JRVGiH6qlBwD#scrollTo=57bc788d",
             code: "https://github.com/Charlotte-Natasha/Airplane-Performance-and-Engine-Type-Prediction-Model",
@@ -69,7 +71,7 @@ const Portfolio = () => {
             src: crash, 
             title: "Aircraft Crash Data Analysis",
             teaser:
-                "Project showcases data wrangling, interactive visualization, and clustering skills. Compétences en **Data Analysis** mises en avant.",
+                "Project showcases data wrangling, interactive visualization, and clustering skills. **Data Analysis** skills highlighted.", 
             techStack: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
             href: "https://code--hub.herokuapp.com/",
             code: "https://github.com/Charlotte-Natasha/Aircraft-Crash-Data",
@@ -78,7 +80,7 @@ const Portfolio = () => {
             id: 3,
             src: three, 
             title: "3D Birthday Portfolio Site",
-            teaser: "Interactive portfolio using Three.js and Vite. Projet de **développement web 3D**.",
+            teaser: "Interactive portfolio using Three.js and Vite. **3D Web Development** project.", 
             techStack: ["React", "Three.js", "Vite"],
             href: "https://3d-birthday-site.netlify.app/",
             code: "https://github.com/Charlotte-Natasha/3D-portfolio",
@@ -96,7 +98,7 @@ const Portfolio = () => {
             id: 5,
             src: mitch, 
             title: "Michelle's Portfolio Website",
-            teaser: "Showcasing Michelle Okello's projects and skills. Projet de **développement Frontend**.",
+            teaser: "Showcasing Michelle Okello's projects and skills. **Frontend Development** project.",
             techStack: "React, Tailwind CSS", 
             href: "https://michelleokello.netlify.app/",
             code: "https://github.com/Charlotte-Natasha/Mitch-Journey",
@@ -116,10 +118,10 @@ const Portfolio = () => {
             <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full px-4 md:px-6 lg:px-8">
                 <div className="pb-6 md:pb-8">
                     <p className="text-3xl md:text-4xl font-bold inline border-b-4 border-pink-500 mb-4 md:mb-6">
-                        Portfolio de Projets IA & Tech
+                        AI & Tech Projects Portfolio 
                     </p>
                     <p className="py-6 text-pink-200">
-                        Découvrez mes réalisations. Le **Score de Pertinence IA** (simulé) est affiché pour mettre en lumière les projets les plus techniques.
+                        Discover my creations. The (simulated) **AI Relevance Score** is displayed to highlight the most technical projects.
                     </p>
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
@@ -154,7 +156,7 @@ const Portfolio = () => {
                                 </div>
                                 
                                 {/* Image Placeholder */}
-                                <div className="w-full h-40 bg-gray-800 flex items-center justify-center rounded-md mt-2">
+                                <div className="w-full h-40 bg-black flex items-center justify-center rounded-md mt-2">
                                     <img 
                                         src={src} alt={title} className="w-full h-40 object-cover rounded-md mt-2" />
                                 </div>
@@ -168,7 +170,7 @@ const Portfolio = () => {
                                     rel="noopener noreferrer"
                                     className="w-1/2 p-4 text-center duration-200 hover:scale-[1.03] hover:bg-pink-700/20 font-medium"
                                 >
-                                    Démo
+                                    Demo
                                 </a>
                                 <a 
                                     href={code} 

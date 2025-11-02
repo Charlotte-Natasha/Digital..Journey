@@ -189,7 +189,7 @@ const Contact = () => {
 
             {/* In-Page Success Message (Will now display the correct translation) */}
             {status === 'success' && (
-              <p className="text-center text-lg font-bold text-green-400 mt-2">
+              <p className="text-center text-lg font-bold text-pink-900 mt-2">
                 {t('form_success_message')} 
               </p>
             )}

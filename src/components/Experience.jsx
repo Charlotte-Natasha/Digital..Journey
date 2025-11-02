@@ -1,74 +1,16 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
-const skillsData = [
-    {
-        category: "DATA SCIENCE & PROG.",
-        items: ["Python (Scikit-learn, Pandas, Plotly)", "Machine Learning/NLP", "Analyse de données"]
-    },
-    {
-        category: "DÉVELOPPEMENT & OUTILS",
-        items: ["React/Vite, Node.js", "Django/Flask, SQL", "Firebase/Google Cloud"]
-    },
-    {
-        category: "COMPÉTENCES TRANSFÉRABLES",
-        items: ["Rigueur Analytique", "Gestion de Projet (Agile)", "Esprit Critique"]
-    }
-];
-
-// Séparation des données pour deux sections distinctes
-const aviationExperience = [
-    {
-        company: "BlueBird Aviation",
-        duration: "Mars ‘19 à Juin ‘21",
-        title: "Technicienne Aéronautique",
-        location: "Aéroport Wilson, Nairobi",
-        tasks: [
-            "Application stricte des procédures de maintenance et des réglementations (DGAC).",
-            "Participation aux formations de sécurité et de maintenance.",
-            "Inspections pré-vol et structurales (fuselage, ailes, moteurs).",
-        ]
-    },
-    {
-        company: "East African Air Charters",
-        duration: "Janvier à Mars ‘17",
-        title: "Stage (Internship)",
-        location: "Aéroport Wilson, Nairobi",
-        tasks: [
-            "Maintenance curative, corrective et préventive (roues/freins) sur Cessna et Piper.",
-            "Contrôle, test et diagnostic des équipements embarqués.",
-            "Exécution des interventions selon la documentation technique (CMM).",
-        ]
-    },
-];
-
-const extraProfessionalActivities = [
-    {
-        company: "Cajigo",
-        duration: "Juillet ‘23 - Jan ’25",
-        title: "Responsable des médias sociaux",
-        location: "En ligne (UK)",
-        tasks: [
-            "Automatisation de la planification de contenu pour l'efficacité opérationnelle.",
-            "Rédaction et structuration de contenu LinkedIn ciblé (renforcement des compétences de reporting).",
-        ]
-    },
-    {
-        company: "GG Care",
-        duration: "Août ‘23 - Déc ‘23",
-        title: "Développeur Backend Junior",
-        location: "En ligne (UK)",
-        tasks: [
-            "Développement d'interactions vocales pour IHM intuitives et critiques.",
-            "Gestion d'états d'interface en temps réel pour des retours utilisateurs fiables (analogie cockpit).",
-        ]
-    },
-];
-
-// Le composant Experience utilise désormais les deux listes séparées.
-const Experience = () => {
+const Experience = () => { 
+    const { t } = useTranslation();
     
-    // Fonction utilitaire pour rendre les blocs d'expérience
-    const renderExperienceBlocks = (data) => (
+    // Get data from translations
+    const skillsData = t('skillsData', { returnObjects: true });
+    const extraProfessionalActivities = t('extraProfessionalActivities', { returnObjects: true });
+    const aviationExperience = t('aviationExperience', { returnObjects: true });
+
+    // Utility function to render experience blocks
+    const renderExperienceBlocks = (data) => ( 
         <div className='space-y-12'>
             {data.map((job, index) => (
                 <div key={index} className='p-6 rounded-xl bg-pink-900/40 border border-pink-700 shadow-xl transition-all duration-300 hover:border-pink-500'>
@@ -98,14 +40,14 @@ const Experience = () => {
                 
                 {/* Section Header */}
                 <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-pink-500'>Compétences & Expérience</p>
+                    <p className='text-4xl font-bold inline border-b-4 border-pink-500'>{t('exp_title')}</p> 
                     <p className='py-6 text-xl text-pink-200'>
-                        Aperçu de mon expertise technique et de mon parcours professionnel.
+                        {t('exp_subtitle')}
                     </p>
                 </div>
                 
-                {/* --- 1. SKILLS SECTION (COMPÉTENCES) --- */}
-                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>Compétences Clés</h2>
+                {/* --- 1. SKILLS SECTION --- */}
+                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>{t('exp_skills_header')}</h2>
                 <div className='grid md:grid-cols-3 gap-8 mb-16'>
                     {skillsData.map((section, index) => (
                         <div key={index} className='p-6 rounded-xl bg-pink-900/40 border border-pink-700 shadow-lg'>
@@ -113,7 +55,7 @@ const Experience = () => {
                             <ul className='space-y-2'>
                                 {section.items.map((item, i) => (
                                     <li key={i} className='flex items-start text-gray-200 text-base'>
-                                        <span className='text-pink-500 mr-2'>&#9733;</span> {/* Star icon for bullet */}
+                                        <span className='text-pink-500 mr-2'>&#9733;</span>
                                         {item}
                                     </li>
                                 ))}
@@ -122,13 +64,13 @@ const Experience = () => {
                     ))}
                 </div>
 
-                {/* --- 2. PROFESSIONAL EXPERIENCE SECTION (EXPÉRIENCE PROFESSIONNELLE) --- */}
-                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>Expérience Professionnelle - Hors Tech</h2>
-                {renderExperienceBlocks(aviationExperience)}
-                
-                {/* --- 3. EXTRA-PROFESSIONAL ACTIVITIES SECTION (ACTIVITÉS EXTRA-PROFESSIONNELLES) --- */}
-                <h2 className='text-3xl font-semibold text-white mt-12 mb-6 border-l-4 border-pink-500 pl-3'>Activites Extra-Professionnelle - Tech</h2>
+                {/* --- 2. EXTRA-PROFESSIONAL ACTIVITIES SECTION --- */}
+                <h2 className='text-3xl font-semibold text-white mb-6 border-l-4 border-pink-500 pl-3'>{t('exp_extracurricular_header')}</h2>
                 {renderExperienceBlocks(extraProfessionalActivities)}
+                
+                {/* --- 3. PROFESSIONAL EXPERIENCE SECTION --- */}
+                <h2 className='text-3xl font-semibold text-white mt-12 mb-6 border-l-4 border-pink-500 pl-3'>{t('exp_aviation_header')}</h2>
+                {renderExperienceBlocks(aviationExperience)}
 
             </div>
         </div>
