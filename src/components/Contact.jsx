@@ -69,9 +69,7 @@ const Contact = () => {
           className="p-6"
         >
           
-          {/* Hidden fields for Netlify and spam protection (CRUCIAL) */}
           <input type="hidden" name="form-name" value="contact_form" />
-          {/* Honeypot field: Type text and hide it with Tailwind (more robust against simple bots) */}
           <input type="text" name="bot-field" className="hidden" aria-hidden="true" /> 
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pink-100">
