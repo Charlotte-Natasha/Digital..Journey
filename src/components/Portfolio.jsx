@@ -4,7 +4,7 @@ import mitch from "../assets/portfolio/mitch.png";
 import code from "../assets/portfolio/co.png";
 import crash from "../assets/portfolio/crashes.png";
 import piston from "../assets/portfolio/piston.png";
-import akothImage from "../assets/portfolio/akoth.png";
+import akothImage from "../assets/portfolio/Akoth.png";
 import { useTranslation } from "react-i18next";
 
 const normalizeTechStack = (stack) => {
