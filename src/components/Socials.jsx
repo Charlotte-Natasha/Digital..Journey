@@ -41,7 +41,7 @@ const Socials = () => {
                     Resume <BsFillPersonLinesFill size={30}/>
                 </>
             ),
-            href: '/ONYANGO_Charlotte_EPSI.pdf',
+            href: '/ONYANGO_Charlotte_EPSI(A).pdf',
             style: 'rounded-br-md',
             download: true,
         },
