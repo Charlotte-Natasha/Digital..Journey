@@ -1,7 +1,6 @@
 import React from 'react'
 import {MdKeyboardArrowRight} from 'react-icons/md'
 import ProfilePic from '../assets/portfolio/prof.jpg' 
-import AIBg from '../assets/hues.png' 
 import { Link } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
@@ -11,18 +10,9 @@ const Home = () => {
     return (
         <div
           name="home"
-          className="w-full pt-24 pb-24 h-screen relative flex items-center overflow-hidden">
+          className="w-full pt-24 pb-24 h-screen relative flex items-center overflow-hidden bg-gradient-to-b from-black via-black to-pink-900">
           <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ 
-                backgroundImage: `url(${AIBg})`, 
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-pink-900/90 opacity-90"> 
-              </div>
-            </div>
-
+            
             <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between w-full gap-8 px-2 md:px-4 lg:px-0 relative z-10">
               {/* Text Section */}
               <div className="flex flex-col justify-center max-w-lg md:text-left">

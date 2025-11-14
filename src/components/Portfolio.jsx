@@ -4,15 +4,9 @@ import mitch from "../assets/portfolio/mitch.png";
 import code from "../assets/portfolio/co.png";
 import crash from "../assets/portfolio/crashes.png";
 import piston from "../assets/portfolio/piston.png";
+import akothImage from "../assets/portfolio/akoth.png";
 import { useTranslation } from "react-i18next";
 
-
-// --- DATA PROCESSING / FEATURE ENGINEERING FOR PORTFOLIO ---
-/**
-
- * @param {Array | string} stack 
- * @returns {Array} 
- */
 const normalizeTechStack = (stack) => {
     if (Array.isArray(stack)) return stack;
     if (typeof stack === 'string') {
@@ -25,15 +19,11 @@ const processProjectData = (data) => {
     return data.map(project => {
         let level = 'Base (Dev)';
         let color = 'bg-pink-600';
-
         
         const techStackArray = normalizeTechStack(project.techStack);
-        
-        
         const content = project.teaser.toLowerCase() + ' ' + techStackArray.join(' ').toLowerCase();
 
-        
-        if (content.includes('machine learning') || content.includes('nlp') || content.includes('prediction') || content.includes('scikit-learn')) {
+        if (content.includes('machine learning') || content.includes('nlp') || content.includes('prediction') || content.includes('scikit-learn') || content.includes('rag') || content.includes('gemini')) {
             level = 'High (AI/ML)'; 
             color = 'bg-pink-600';
         } else if (content.includes('data cleaning') || content.includes('visualization') || content.includes('analysis') || content.includes('three.js')) {
@@ -49,29 +39,25 @@ const processProjectData = (data) => {
         };
     });
 };
-// -------------------------------------------------------------------
 
 const Portfolio = () => {
-    
     const { t } = useTranslation();
     
     const rawPortfolios = [
         {
-            id: 1,
-            src: piston, 
-            title: "Aircraft Performance and Engine Type Prediction ",
-            teaser:
-                "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Strong **Machine Learning** component.", 
-            techStack: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
-            href: "https://colab.research.google.com/drive/1wDw6D7rXknG1pwsmiBI9JRVGiH6qlBwD#scrollTo=57bc788d",
-            code: "https://github.com/Charlotte-Natasha/Airplane-Performance-and-Engine-Type-Prediction-Model",
+            id: 1, 
+            src: akothImage, 
+            title: t('portfolio.projects.akoth.title'),
+            teaser: t('portfolio.projects.akoth.teaser'),
+            techStack: ["Gemini API", "LangChain", "Streamlit", "ChromaDB", "Python", "RAG"],
+            href: "https://akoth-the-wildlife-advisor.streamlit.app/", 
+            code: "https://github.com/Charlotte-Natasha/Akoth-Mara-Advisor", 
         },
         {
             id: 2,
             src: crash, 
-            title: "Aircraft Crash Data Analysis",
-            teaser:
-                "Project showcases data wrangling, interactive visualization, and clustering skills. **Data Analysis** skills highlighted.", 
+            title: t('portfolio.projects.crash.title'),
+            teaser: t('portfolio.projects.crash.teaser'),
             techStack: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
             href: "https://code--hub.herokuapp.com/",
             code: "https://github.com/Charlotte-Natasha/Aircraft-Crash-Data",
@@ -79,8 +65,8 @@ const Portfolio = () => {
         {
             id: 3,
             src: three, 
-            title: "3D Birthday Portfolio Site",
-            teaser: "Interactive portfolio using Three.js and Vite. **3D Web Development** project.", 
+            title: t('portfolio.projects.three.title'),
+            teaser: t('portfolio.projects.three.teaser'),
             techStack: ["React", "Three.js", "Vite"],
             href: "https://3d-birthday-site.netlify.app/",
             code: "https://github.com/Charlotte-Natasha/3D-portfolio",
@@ -88,26 +74,24 @@ const Portfolio = () => {
         {
             id: 4,
             src: code, 
-            title: "Code-Hub Social Platform",
-            teaser: "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys.",
-            techStack: "Python, Django, PostgreSQL", 
+            title: t('portfolio.projects.codehub.title'),
+            teaser: t('portfolio.projects.codehub.teaser'),
+            techStack: ["Python", "Django", "PostgreSQL"],
             href: "https://code--hub.herokuapp.com/",
             code: "https://github.com/Charlotte-Natasha/CodeHub",
         },
         {
             id: 5,
             src: mitch, 
-            title: "Michelle's Portfolio Website",
-            teaser: "Showcasing Michelle Okello's projects and skills. **Frontend Development** project.",
-            techStack: "React, Tailwind CSS", 
+            title: t('portfolio.projects.michelle.title'),
+            teaser: t('portfolio.projects.michelle.teaser'),
+            techStack: ["React", "Tailwind CSS"],
             href: "https://michelleokello.netlify.app/",
             code: "https://github.com/Charlotte-Natasha/Mitch-Journey",
         },
     ];
 
-    
     const processedPortfolios = processProjectData(rawPortfolios);
-
 
     return (
         <div
@@ -118,10 +102,10 @@ const Portfolio = () => {
             <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full px-4 md:px-6 lg:px-8">
                 <div className="pb-6 md:pb-8">
                     <p className="text-3xl md:text-4xl font-bold inline border-b-4 border-pink-500 mb-4 md:mb-6">
-                        AI & Tech Projects Portfolio 
+                        {t('portfolio.title')}
                     </p>
                     <p className="py-6 text-pink-200">
-                        Discover my creations. The (simulated) **AI Relevance Score** is displayed to highlight the most technical projects.
+                        {t('portfolio.subtitle')}
                     </p>
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
@@ -130,11 +114,9 @@ const Portfolio = () => {
                             key={id}
                             className="shadow-md shadow-pink-600 rounded-lg flex flex-col h-full bg-gray-900/70 border border-pink-700 hover:border-green-500 duration-300 transform hover:scale-[1.02]" 
                         >
-                            {/* === CONTENT WRAPPER: Takes all space above buttons === */}
                             <div className="p-4 flex-grow">
                                 <div className="flex justify-between items-start mb-2">
                                     <h3 className="text-xl font-semibold text-white">{title}</h3>
-                                    {/* Scores */}
                                     <span 
                                         className={`flex-shrink-0 ml-3 px-2 py-1 text-xs font-bold rounded-full text-white ${relevanceColor}`}
                                     >
@@ -142,7 +124,6 @@ const Portfolio = () => {
                                     </span>
                                 </div>
                                 
-                                {/* 🎯 Teaser/Tech Stack Wrapper: Limited Height & Overflow hidden */}
                                 <div className="mb-3"> 
                                     <p className="text-sm text-gray-300 italic">{teaser}</p> 
 
@@ -155,14 +136,12 @@ const Portfolio = () => {
                                     </div>
                                 </div>
                                 
-                                {/* Image Placeholder */}
                                 <div className="w-full h-40 bg-black flex items-center justify-center rounded-md mt-2">
                                     <img 
                                         src={src} alt={title} className="w-full h-40 object-cover rounded-md mt-2" />
                                 </div>
                             </div>
 
-                            {/* === BUTTONS: Pushed to the very bottom === */}
                             <div className="flex items-center justify-center border-t border-pink-700">
                                 <a 
                                     href={href} 
@@ -170,7 +149,7 @@ const Portfolio = () => {
                                     rel="noopener noreferrer"
                                     className="w-1/2 p-4 text-center duration-200 hover:scale-[1.03] hover:bg-pink-700/20 font-medium"
                                 >
-                                    Demo
+                                    {t('portfolio.demo')}
                                 </a>
                                 <a 
                                     href={code} 
@@ -178,7 +157,7 @@ const Portfolio = () => {
                                     rel="noopener noreferrer"
                                     className="w-1/2 p-4 text-center duration-200 hover:scale-[1.03] hover:bg-pink-700/20 border-l border-pink-700 font-medium"
                                 >
-                                    Code
+                                    {t('portfolio.code')}
                                 </a>
                             </div>
                         </div>

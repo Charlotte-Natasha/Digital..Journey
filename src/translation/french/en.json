@@ -1,12 +1,12 @@
 {
     "home_title": "Work-Study - AI AND DATA SCIENCE DEVELOPER",
-    "home_description": "I am <b class='text-pink-100'>actively seeking a work-study/internship starting immediately (1 week at school/3 weeks at the company)</b> to fulfill my third year bachelor's degree in AI and Data Science at <b class='text-pink-100'>EPSI Montpellier</b>. As a graduate in <b class='text-pink-100'>Aeronautical Engineering</b>, I am dedicated to developing solid competencies in <b class='text-pink-100'>data analysis</b>, intelligent automation, and <b class='text-pink-100'>model deployment</b> to contribute to high-impact technological projects." ,
-    "home_button": "Portfolio" ,
+    "home_description": "I am <b class='text-pink-100'>actively seeking a work-study/internship starting immediately (1 week at school/3 weeks at the company)</b> to fulfill my third year bachelor's degree in AI and Data Science at <b class='text-pink-100'>EPSI Montpellier</b>. As a graduate in <b class='text-pink-100'>Aeronautical Engineering</b>, I am dedicated to developing solid competencies in <b class='text-pink-100'>data analysis</b>, intelligent automation, and <b class='text-pink-100'>model deployment</b> to contribute to high-impact technological projects.",
+    "home_button": "Portfolio",
 
     "about_title": "About",
     "about_paragraph_1": "With a degree in aeronautical engineering, I began my career in aircraft maintenance hangars, where I worked directly on engines, landing gear, and mechanical systems. Those years spent handling tools, following safety procedures, and diagnosing technical problems taught me the rigor, method, and patience that are essential qualities in any technological environment.",
     "about_paragraph_2": "It was this same curiosity for precision and performance that led me to turn to computer development and artificial intelligence. Today, as I pursue a bachelor's degree in Artificial Intelligence and Data Science at EPSI Montpellier, I am exploring how data and machine learning can transform the maintenance, design, and efficiency of technical systems.",
-    "about_paragraph_3": "My ambition is to build a bridge between the physical world of aeronautics and the digital world of AI, using data to improve reliability, fault prediction, and the sustainability of mechanical systems. This transition is not a change of direction, but a natural evolution—from wrenches to algorithms, always driven by the same engine: the pursuit of precision and innovation." ,
+    "about_paragraph_3": "My ambition is to build a bridge between the physical world of aeronautics and the digital world of AI, using data to improve reliability, fault prediction, and the sustainability of mechanical systems. This transition is not a change of direction, but a natural evolution—from wrenches to algorithms, always driven by the same engine: the pursuit of precision and innovation.",
 
     "nav_home": "Home",
     "nav_about": "About",
@@ -22,7 +22,7 @@
     "form_label_phone": "Phone",
     "form_label_subject": "Subject",
     "form_label_message": "Message",
-    "form_placeholder_phone": "+33000000",
+    "form_placeholder_phone": "+33 0 00 00 00",
     "form_max_chars": "Max. 500 characters",
     "form_label_message_placeholder": "Your message here",
     "form_optional": "Optional",
@@ -33,113 +33,129 @@
     "form_success_message": "Message sent successfully!", 
     "form_error_message": "An error occurred. Please try again later.",
 
-
-    "portfolio_title": "AI & Tech Projects Portfolio",
-    "portfolio_subtitle": "Explore my projects. The **AI Relevance Score** (simulated) is displayed to highlight the most technical projects.",
-    "portfolio_btn_demo": "Demo",
-    "portfolio_btn_code": "Code",
+    "portfolio": {
+        "title": "AI & Tech Projects Portfolio",
+        "subtitle": "Discover my creations. The (simulated) AI Relevance Score is displayed to highlight the most technical projects.",
+        "demo": "Demo",
+        "code": "Code",
+        "projects": {
+            "akoth": {
+                "title": "Akoth: AI Wildlife Expert (RAG)",
+                "teaser": "An interactive, conversational AI expert for Kenyan wildlife and the Maasai Mara. This project uses Retrieval-Augmented Generation (RAG) powered by the Google Gemini API and LangChain for contextual accuracy."
+            },
+            "crash": {
+                "title": "Aircraft Crash Data Analysis",
+                "teaser": "Project showcases data wrangling, interactive visualization, and clustering skills. Data Analysis skills highlighted."
+            },
+            "three": {
+                "title": "3D Birthday Portfolio Site",
+                "teaser": "Interactive portfolio using Three.js and Vite. 3D Web Development project."
+            },
+            "codehub": {
+                "title": "Code-Hub Social Platform",
+                "teaser": "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys."
+            },
+            "michelle": {
+                "title": "Michelle's Portfolio Website",
+                "teaser": "Showcasing Michelle Okello's projects and skills. Frontend Development project."
+            }
+        }
+    },
     
-    "relevance_level_base": "Base (Dev)",
-    "relevance_level_medium": "Medium (Analysis/3D)",
-    "relevance_level_high": "High (AI/ML)",
-    
-    "projects": [
-    {
-        "id": 1,
-        "title": "Aircraft Performance and Engine Type Prediction",
-        "teaser": "Involves data cleaning, feature selection (Lasso, Mutual Info), model training (Linear, Logistic Regression), evaluation (RMSE, R2, Accuracy, F1), and cross-validation. Strong focus on **Machine Learning**."
-    },
-    {
-        "id": 2,
-        "title": "Aircraft Crash Data Analysis",
-        "teaser": "Project showcases data wrangling, interactive visualization, and clustering skills. Demonstrates **Data Analysis** competencies."
-    },
-    {
-        "id": 3,
-        "title": "3D Birthday Portfolio Site",
-        "teaser": "Interactive portfolio using Three.js and Vite. **3D Web Development** project."
-    },
-    {
-        "id": 4,
-        "title": "Code-Hub Social Platform",
-        "teaser": "Code-Hub is a social platform that connects junior developers, allowing them to share resources, collaborate on projects, and support each other in their career journeys."
-    },
-    {
-        "id": 5,
-        "title": "Michelle's Portfolio Website",
-        "teaser": "Showcasing Michelle Okello's projects and skills. **Frontend Development** project."
-    }
+    "skills_title": "Skills & Continuous Learning",
+    "skills_subtitle": "Technical expertise and commitment to growth",
+    "skills_core_header": "Core Technical Skills",
+    "skills_learning_header": "Currently Learning & Expanding",
+    "skills_learning_subtitle": "Technologies and concepts I'm actively developing",
+    "skills_soft_header": "Professional Approach",
+    "skills_progress": "Progress",
 
+    "skillsData": [
+        {
+            "category": "Data Science & AI",
+            "icon": "🤖",
+            "items": [
+                { "name": "Python (Scikit-learn, Pandas, NumPy)", "level": "85%" },
+                { "name": "Machine Learning & NLP", "level": "75%" },
+                { "name": "RAG (LangChain, ChromaDB, Gemini API)", "level": "75%" },
+                { "name": "Data Visualization (Plotly, Matplotlib)", "level": "80%" }
+            ]
+        },
+        {
+            "category": "Development",
+            "icon": "💻",
+            "items": [
+                { "name": "React & Vite", "level": "80%" },
+                { "name": "Django & Flask", "level": "70%" },
+                { "name": "SQL & Database Design", "level": "75%" }
+            ]
+        },
+        {
+            "category": "Tools & Cloud",
+            "icon": "☁️",
+            "items": [
+                { "name": "Git & GitHub", "level": "85%" },
+                { "name": "Firebase & Google Cloud", "level": "65%" },
+                { "name": "Docker & Containerization", "level": "50%" }
+            ]
+        }
     ],
 
-    "exp_title": "Skills & Experience",
-    "exp_subtitle": "Overview of my technical expertise and professional journey.",
-    "exp_skills_header": "Key Skills",
-    "exp_aviation_header": "Professional Experience - Non-Tech",
-    "exp_extracurricular_header": "Extra-Professional Activities - Tech",
-    "form_error_message": "An error occurred. Please try again later.",
-    
-    "skillsData": 
-    
-    [
-    {
-        "category": "DATA SCIENCE & PROG.",
-        "items": ["Python (Scikit-learn, Pandas, Plotly)", "Machine Learning/NLP", "Data Analysis"]
-    },
-    {
-        "category": "DEVELOPMENT & TOOLS",
-        "items": ["React/Vite, Node.js", "Django/Flask, SQL", "Firebase/Google Cloud"]
-    },
-    {
-        "category": "TRANSFERABLE SKILLS",
-        "items": ["Analytical Rigor", "Project Management (Agile)", "Critical Thinking"]
-    }
+    "learningData": [
+        {
+            "technology": "Retrieval-Augmented Generation (RAG)",
+            "icon": "💬",
+            "status": "Active Development",
+            "description": "Building RAG pipelines with LangChain and ChromaDB. Optimizing chunking strategies and prompt engineering with Gemini API.",
+            "goal": ">95% retrieval accuracy, <2s response latency",
+            "progress": "75%"
+        },
+        {
+            "technology": "MLOps & CI/CD",
+            "icon": "🚀",
+            "status": "Active Development",
+            "description": "Developing automated deployment pipelines with GitHub Actions and Docker. Implementing model monitoring with Prometheus/Grafana.",
+            "goal": "Zero-downtime deployment to AWS/GCP Cloud Run",
+            "progress": "45%"
+        },
+        {
+            "technology": "Deep Learning: CV & Sequence Modeling",
+            "icon": "🧠",
+            "status": "In Progress",
+            "description": "Training CNNs (ResNet/VGG) and LSTMs for image classification and time-series forecasting with PyTorch.",
+            "goal": ">90% accuracy on CIFAR-10, containerized API deployment",
+            "progress": "60%"
+        },
+        {
+            "technology": "Big Data Engineering",
+            "icon": "☕",
+            "status": "In Progress",
+            "description": "Learning Java/Scala for distributed processing with Apache Spark and Hadoop. Building scalable ETL pipelines.",
+            "goal": "Working Spark pipeline with efficient data transformation",
+            "progress": "25%"
+        }
     ],
 
-    "aviationExperience": [
-    {
-        "company": "BlueBird Aviation",
-        "duration": "Mar ‘19 to Jun ‘21",
-        "title": "Aeronautical Technician",
-        "location": "Wilson Airport, Nairobi",
-        "tasks": [
-            "Strict application of maintenance procedures and regulations (DGAC).",
-            "Participation in safety and maintenance training.",
-            "Pre-flight and structural inspections (fuselage, wings, engines)."
-        ]
-    },
-    {
-        "company": "East African Air Charters",
-        "duration": "Jan to Mar ‘17",
-        "title": "Internship",
-        "location": "Wilson Airport, Nairobi",
-        "tasks": [
-            "Curative, corrective, and preventive maintenance (wheels/brakes) on Cessna and Piper.",
-            "Control, testing, and diagnostics of on-board equipment.",
-            "Execution of interventions according to technical documentation (CMM)."
-        ]
-    }
-    ],
-    "extraProfessionalActivities": [
-    {
-        "company": "Cajigo",
-        "duration": "Jul ‘23 - Jan ’25",
-        "title": "Social Media Manager",
-        "location": "Online (UK)",
-        "tasks": [
-            "Content planning automation for operational efficiency.",
-            "Writing and structuring targeted LinkedIn content (strengthening reporting skills)."
-        ]
-    },
-    {
-        "company": "GG Care",
-        "duration": "Aug ‘23 - Dec ‘23",
-        "title": "Junior Backend Developer",
-        "location": "Online (UK)",
-        "tasks": [
-            "Development of voice interactions for intuitive and critical HMI.",
-            "Real-time interface state management for reliable user feedback (cockpit analogy)."
-        ]
-    }
+    "softSkills": [
+        {
+            "name": "Problem Solving",
+            "icon": "🎯",
+            "description": "Analytical approach to complex challenges"
+        },
+        {
+            "name": "Agile Mindset",
+            "icon": "⚡",
+            "description": "Iterative development & collaboration"
+        },
+        {
+            "name": "Communication",
+            "icon": "💬",
+            "description": "Clear technical documentation"
+        },
+        {
+            "name": "Adaptability",
+            "icon": "🔄",
+            "description": "Fast learner of new technologies"
+        }
     ]
 }
