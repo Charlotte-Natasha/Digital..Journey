@@ -1,161 +1,164 @@
 {
-    "home_title": "Alternance - DÉVELOPPEUR IA ET DATA SCIENCE",
-    "home_description": "Je suis <b class='text-pink-100'>activement à la recherche d'une alternance/stage débutant immédiatement (1 semaine en école/2 semaines en entreprise)</b> pour valider ma troisième année de licence en IA et Data Science à <b class='text-pink-100'>EPSI Montpellier</b>. Diplômée en <b class='text-pink-100'>Ingénierie Aéronautique</b>, je me consacre au développement de compétences solides en <b class='text-pink-100'>analyse de données</b>, automatisation intelligente et <b class='text-pink-100'>déploiement de modèles</b> pour contribuer à des projets technologiques à fort impact.",
-    "home_button": "Portfolio",
+  "home_title": "Alternance - DÉVELOPPEUR IA ET DATA SCIENCE",
+  "home_description": "Je suis <b class='text-pink-100'>activement à la recherche d'une alternance/stage débutant immédiatement (1 semaine en école/2 semaines en entreprise)</b> pour valider ma troisième année de licence en IA et Data Science à <b class='text-pink-100'>EPSI Montpellier</b>. Diplômée en <b class='text-pink-100'>Ingénierie Aéronautique</b>, je me consacre au développement de compétences solides en <b class='text-pink-100'>analyse de données</b>, automatisation intelligente et <b class='text-pink-100'>déploiement de modèles</b> pour contribuer à des projets technologiques à fort impact.",
+  "home_button": "Portfolio",
 
-    "about_title": "À Propos",
-    "about_paragraph_1": "Diplômée en ingénierie aéronautique, j'ai débuté ma carrière dans les hangars de maintenance d'avions, où j'ai travaillé directement sur les moteurs, les trains d'atterrissage et les systèmes mécaniques. Ces années passées à manipuler des outils, suivre des procédures de sécurité et diagnostiquer des problèmes techniques m'ont enseigné la rigueur, la méthode et la patience qui sont des qualités essentielles dans tout environnement technologique.",
-    "about_paragraph_2": "C'est cette même curiosité pour la précision et la performance qui m'a amenée à me tourner vers le développement informatique et l'intelligence artificielle. Aujourd'hui, en poursuivant une licence en Intelligence Artificielle et Data Science à EPSI Montpellier, j'explore comment les données et le machine learning peuvent transformer la maintenance, la conception et l'efficacité des systèmes techniques.",
-    "about_paragraph_3": "Mon ambition est de construire un pont entre le monde physique de l'aéronautique et le monde numérique de l'IA, en utilisant les données pour améliorer la fiabilité, la prédiction des pannes et la durabilité des systèmes mécaniques. Cette transition n'est pas un changement de direction, mais une évolution naturelle des clés aux algorithmes, toujours animée par le même moteur la quête de précision et d'innovation.",
+  "about_title": "À Propos",
+  "about_paragraph_1": "Diplômée en ingénierie aéronautique, j'ai débuté ma carrière dans les hangars de maintenance d'avions, où j'ai travaillé directement sur les moteurs, les trains d'atterrissage et les systèmes mécaniques. Ces années passées à manipuler des outils, suivre des procédures de sécurité et diagnostiquer des problèmes techniques m'ont enseigné la rigueur, la méthode et la patience qui sont des qualités essentielles dans tout environnement technologique.",
+  "about_paragraph_2": "C'est cette même curiosité pour la précision et la performance qui m'a amenée à me tourner vers le développement informatique et l'intelligence artificielle. Aujourd'hui, en poursuivant une licence en Intelligence Artificielle et Data Science à EPSI Montpellier, j'explore comment les données et le machine learning peuvent transformer la maintenance, la conception et l'efficacité des systèmes techniques.",
+  "about_paragraph_3": "Mon ambition est de construire un pont entre le monde physique de l'aéronautique et le monde numérique de l'IA, en utilisant les données pour améliorer la fiabilité, la prédiction des pannes et la durabilité des systèmes mécaniques. Cette transition n'est pas un changement de direction, mais une évolution naturelle des clés aux algorithmes, toujours animée par le même moteur la quête de précision et d'innovation.",
 
-    "nav_home": "Accueil",
-    "nav_about": "À Propos",
-    "nav_portfolio": "Portfolio",
-    "nav_experience": "Expérience",
-    "nav_contact": "Contact",
+  "nav_home": "Accueil",
+  "nav_about": "À Propos",
+  "nav_portfolio": "Portfolio",
+  "nav_experience": "Compétences",
+  "nav_contact": "Contact",
 
-    "contact_title": "Me Contacter",
-    "contact_subtitle": "Entrez en contact ici.",
-    "form_label_firstname": "Prénom",
-    "form_label_lastname": "Nom",
-    "form_label_email": "Email",
-    "form_label_phone": "Téléphone",
-    "form_label_subject": "Sujet",
-    "form_label_message": "Message",
-    "form_placeholder_phone": "+33 0 00 00 00",
-    "form_max_chars": "Max. 500 caractères",
-    "form_label_message_placeholder": "Votre message ici",
-    "form_optional": "Optionnel",
-    "form_btn_submit": "Envoyons un message..",
-    "form_ai_note": "💡 Note : Cette soumission de formulaire est traitée par un modèle NLP léger pour classer automatiquement le sujet du message, démontrant un déploiement pratique de Machine Learning.",
-    
-    "status_sending": "Envoi en cours...",
-    "form_success_message": "Message envoyé avec succès !", 
-    "form_error_message": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+  "contact_title": "Me Contacter",
+  "contact_subtitle": "Entrez en contact ici.",
+  "form_label_firstname": "Prénom",
+  "form_label_lastname": "Nom",
+  "form_label_email": "Email",
+  "form_label_phone": "Téléphone",
+  "form_label_subject": "Sujet",
+  "form_label_message": "Message",
+  "form_placeholder_phone": "+33 0 00 00 00",
+  "form_max_chars": "Max. 500 caractères",
+  "form_label_message_placeholder": "Votre message ici",
+  "form_optional": "Optionnel",
+  "form_btn_submit": "Envoyons un message..",
+  "form_ai_note": "💡 Note : Cette soumission de formulaire est traitée par un modèle NLP léger pour classer automatiquement le sujet du message, démontrant un déploiement pratique de Machine Learning.",
 
-    "portfolio": {
-        "title": "Portfolio de Projets IA & Tech",
-        "subtitle": "Découvrez mes créations. Le score de pertinence IA (simulé) est affiché pour mettre en avant les projets les plus techniques.",
-        "demo": "Démo",
-        "code": "Code",
-        "projects": {
-            "akoth": {
-                "title": "Akoth : Expert IA de la Faune (RAG)",
-                "teaser": "Un expert IA conversationnel et interactif sur la faune kenyane et le Maasai Mara. Ce projet utilise la Génération Augmentée par Récupération (RAG) alimentée par l'API Google Gemini et LangChain pour une précision contextuelle."
-            },
-            "crash": {
-                "title": "Analyse de Données de Crashs Aériens",
-                "teaser": "Le projet met en valeur les compétences en manipulation de données, visualisation interactive et clustering. Compétences en analyse de données mises en avant."
-            },
-            "three": {
-                "title": "Site Portfolio 3D d'Anniversaire",
-                "teaser": "Portfolio interactif utilisant Three.js et Vite. Projet de développement Web 3D."
-            },
-            "codehub": {
-                "title": "Plateforme Sociale Code-Hub",
-                "teaser": "Code-Hub est une plateforme sociale qui connecte les développeurs juniors, leur permettant de partager des ressources, collaborer sur des projets et se soutenir mutuellement dans leurs parcours professionnels."
-            },
-            "michelle": {
-                "title": "Site Portfolio de Michelle",
-                "teaser": "Présentation des projets et compétences de Michelle Okello. Projet de développement Frontend."
-            }
+  "status_sending": "Envoi en cours...",
+  "form_success_message": "Message envoyé avec succès !",
+  "form_error_message": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+
+  "portfolio": {
+    "title": "Portfolio de Projets IA & Tech",
+    "subtitle": "Découvrez mes créations. Le score de pertinence IA (simulé) est affiché pour mettre en avant les projets les plus techniques.",
+    "demo": "Démo",
+    "code": "Code",
+    "projects": {
+      "akoth": {
+        "title": "Akoth : Expert IA de la Faune (RAG)",
+        "teaser": "Un expert IA conversationnel et interactif sur la faune kenyane et le Maasai Mara. Ce projet utilise la Génération Augmentée par Récupération (RAG) alimentée par l'API Google Gemini et LangChain pour une précision contextuelle."
+      },
+      "crash": {
+        "title": "Analyse de Données de Crashs Aériens",
+        "teaser": "Le projet met en valeur les compétences en manipulation de données, visualisation interactive et clustering. Compétences en analyse de données mises en avant."
+      },
+      "three": {
+        "title": "Site Portfolio 3D d'Anniversaire",
+        "teaser": "Portfolio interactif utilisant Three.js et Vite. Projet de développement Web 3D."
+      },
+      "codehub": {
+        "title": "Plateforme Sociale Code-Hub",
+        "teaser": "Code-Hub est une plateforme sociale qui connecte les développeurs juniors, leur permettant de partager des ressources, collaborer sur des projets et se soutenir mutuellement dans leurs parcours professionnels."
+      },
+      "michelle": {
+        "title": "Site Portfolio de Michelle",
+        "teaser": "Présentation des projets et compétences de Michelle Okello. Projet de développement Frontend."
+      }
+    }
+  },
+
+  "skills_title": "Compétences & Apprentissage Continu",
+  "skills_subtitle": "Expertise technique et engagement envers la croissance",
+  "skills_core_header": "Compétences Techniques Principales",
+  "skills_learning_header": "Actuellement en Apprentissage & Expansion",
+  "skills_learning_subtitle": "Technologies et concepts que je développe activement",
+  "skills_soft_header": "Approche Professionnelle",
+  "skills_progress": "Progression",
+
+  "skillsData": [
+    {
+      "category": "Data Science & IA",
+      "icon": "🤖",
+      "items": [
+        { "name": "Python (Scikit-learn, Pandas, NumPy)", "level": "85%" },
+        { "name": "Machine Learning & NLP", "level": "75%" },
+        { "name": "RAG (LangChain, ChromaDB, API Gemini)", "level": "75%" },
+        {
+          "name": "Visualisation de Données (Plotly, Matplotlib)",
+          "level": "80%"
         }
+      ]
     },
-    
-    "skills_title": "Compétences & Apprentissage Continu",
-    "skills_subtitle": "Expertise technique et engagement envers la croissance",
-    "skills_core_header": "Compétences Techniques Principales",
-    "skills_learning_header": "Actuellement en Apprentissage & Expansion",
-    "skills_learning_subtitle": "Technologies et concepts que je développe activement",
-    "skills_soft_header": "Approche Professionnelle",
-    "skills_progress": "Progression",
+    {
+      "category": "Développement",
+      "icon": "💻",
+      "items": [
+        { "name": "React & Vite", "level": "80%" },
+        { "name": "Django & Flask", "level": "70%" },
+        { "name": "SQL & Conception de Bases de Données", "level": "75%" }
+      ]
+    },
+    {
+      "category": "Outils & Cloud",
+      "icon": "☁️",
+      "items": [
+        { "name": "Git & GitHub", "level": "85%" },
+        { "name": "Firebase & Google Cloud", "level": "65%" },
+        { "name": "Docker & Conteneurisation", "level": "50%" }
+      ]
+    }
+  ],
 
-    "skillsData": [
-        {
-            "category": "Data Science & IA",
-            "icon": "🤖",
-            "items": [
-                { "name": "Python (Scikit-learn, Pandas, NumPy)", "level": "85%" },
-                { "name": "Machine Learning & NLP", "level": "75%" },
-                { "name": "RAG (LangChain, ChromaDB, API Gemini)", "level": "75%" },
-                { "name": "Visualisation de Données (Plotly, Matplotlib)", "level": "80%" }
-            ]
-        },
-        {
-            "category": "Développement",
-            "icon": "💻",
-            "items": [
-                { "name": "React & Vite", "level": "80%" },
-                { "name": "Django & Flask", "level": "70%" },
-                { "name": "SQL & Conception de Bases de Données", "level": "75%" }
-            ]
-        },
-        {
-            "category": "Outils & Cloud",
-            "icon": "☁️",
-            "items": [
-                { "name": "Git & GitHub", "level": "85%" },
-                { "name": "Firebase & Google Cloud", "level": "65%" },
-                { "name": "Docker & Conteneurisation", "level": "50%" }
-            ]
-        }
-    ],
+  "learningData": [
+    {
+      "technology": "Génération Augmentée par Récupération (RAG)",
+      "icon": "💬",
+      "status": "Développement Actif",
+      "description": "Construction de pipelines RAG avec LangChain et ChromaDB. Optimisation des stratégies de segmentation et ingénierie de prompts avec l'API Gemini.",
+      "goal": ">95% de précision de récupération, <2s de latence de réponse",
+      "progress": "75%"
+    },
+    {
+      "technology": "Développement Full-Stack",
+      "icon": "💻",
+      "status": "En développement actif",
+      "description": "Je développe des applications full-stack en utilisant React pour le frontend et Python/Django pour le backend. J’intègre des APIs REST/GraphQL, j’optimise les bases de données et je mets en place une authentification sécurisée avec JWT/OAuth.",
+      "goal": "Déployer une application full-stack prête pour la production avec des pipelines CI/CD automatisés",
+      "progress": "85%"
+    },
+    {
+      "technology": "Deep Learning : CV & Modélisation de Séquences",
+      "icon": "🧠",
+      "status": "En Cours",
+      "description": "Entraînement de CNNs (ResNet/VGG) et LSTMs pour la classification d'images et la prévision de séries temporelles avec PyTorch.",
+      "goal": ">90% de précision sur CIFAR-10, déploiement API conteneurisée",
+      "progress": "40%"
+    },
+    {
+      "technology": "Ingénierie Big Data",
+      "icon": "☕",
+      "status": "En Cours",
+      "description": "Apprentissage de Java/Scala pour le traitement distribué avec Apache Spark et Hadoop. Construction de pipelines ETL évolutifs.",
+      "goal": "Pipeline Spark fonctionnel avec transformation de données efficace",
+      "progress": "25%"
+    }
+  ],
 
-    "learningData": [
-        {
-            "technology": "Génération Augmentée par Récupération (RAG)",
-            "icon": "💬",
-            "status": "Développement Actif",
-            "description": "Construction de pipelines RAG avec LangChain et ChromaDB. Optimisation des stratégies de segmentation et ingénierie de prompts avec l'API Gemini.",
-            "goal": ">95% de précision de récupération, <2s de latence de réponse",
-            "progress": "75%"
-        },
-        {
-            "technology": "MLOps & CI/CD",
-            "icon": "🚀",
-            "status": "Développement Actif",
-            "description": "Développement de pipelines de déploiement automatisés avec GitHub Actions et Docker. Implémentation de surveillance de modèles avec Prometheus/Grafana.",
-            "goal": "Déploiement sans interruption vers AWS/GCP Cloud Run",
-            "progress": "45%"
-        },
-        {
-            "technology": "Deep Learning : CV & Modélisation de Séquences",
-            "icon": "🧠",
-            "status": "En Cours",
-            "description": "Entraînement de CNNs (ResNet/VGG) et LSTMs pour la classification d'images et la prévision de séries temporelles avec PyTorch.",
-            "goal": ">90% de précision sur CIFAR-10, déploiement API conteneurisée",
-            "progress": "60%"
-        },
-        {
-            "technology": "Ingénierie Big Data",
-            "icon": "☕",
-            "status": "En Cours",
-            "description": "Apprentissage de Java/Scala pour le traitement distribué avec Apache Spark et Hadoop. Construction de pipelines ETL évolutifs.",
-            "goal": "Pipeline Spark fonctionnel avec transformation de données efficace",
-            "progress": "25%"
-        }
-    ],
-
-    "softSkills": [
-        {
-            "name": "Résolution de Problèmes",
-            "icon": "🎯",
-            "description": "Approche analytique des défis complexes"
-        },
-        {
-            "name": "Mentalité Agile",
-            "icon": "⚡",
-            "description": "Développement itératif & collaboration"
-        },
-        {
-            "name": "Communication",
-            "icon": "💬",
-            "description": "Documentation technique claire"
-        },
-        {
-            "name": "Adaptabilité",
-            "icon": "🔄",
-            "description": "Apprentissage rapide des nouvelles technologies"
-        }
-    ]
+  "softSkills": [
+    {
+      "name": "Résolution de Problèmes",
+      "icon": "🎯",
+      "description": "Approche analytique des défis complexes"
+    },
+    {
+      "name": "Mentalité Agile",
+      "icon": "⚡",
+      "description": "Développement itératif & collaboration"
+    },
+    {
+      "name": "Communication",
+      "icon": "💬",
+      "description": "Documentation technique claire"
+    },
+    {
+      "name": "Adaptabilité",
+      "icon": "🔄",
+      "description": "Apprentissage rapide des nouvelles technologies"
+    }
+  ]
 }
