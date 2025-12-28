@@ -14,25 +14,6 @@
     "nav_experience": "Skills",
     "nav_contact": "Contact",
 
-    "contact_title": "Contact Me",
-    "contact_subtitle": "Get in touch here.",
-    "form_label_firstname": "First name",
-    "form_label_lastname": "Last name",
-    "form_label_email": "Email",
-    "form_label_phone": "Phone",
-    "form_label_subject": "Subject",
-    "form_label_message": "Message",
-    "form_placeholder_phone": "+33 0 00 00 00",
-    "form_max_chars": "Max. 500 characters",
-    "form_label_message_placeholder": "Your message here",
-    "form_optional": "Optional",
-    "form_btn_submit": "Let's Talk..",
-    "form_ai_note": "💡 Note: This form submission is processed by a lightweight NLP Model to automatically classify the message topic, demonstrating practical Machine Learning deployment.",
-    
-    "status_sending": "Sending...",
-    "form_success_message": "Message sent successfully!", 
-    "form_error_message": "An error occurred. Please try again later.",
-
     "portfolio": {
         "title": "AI & Tech Projects Portfolio",
         "subtitle": "Discover my creations. The (simulated) AI Relevance Score is displayed to highlight the most technical projects.",
@@ -46,6 +27,10 @@
             "crash": {
                 "title": "Aircraft Crash Data Analysis",
                 "teaser": "Project showcases data wrangling, interactive visualization, and clustering skills. Data Analysis skills highlighted."
+            },
+            "mood": {
+                "title": "MoodMatch: Mood-Based Social Platform",
+                "teaser": "MoodMatch is a social platform that connects users based on their current moods, allowing them to share experiences and support each other through mood-based interactions."
             },
             "three": {
                 "title": "3D Birthday Portfolio Site",

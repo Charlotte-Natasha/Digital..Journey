@@ -14,25 +14,6 @@
   "nav_experience": "Compétences",
   "nav_contact": "Contact",
 
-  "contact_title": "Me Contacter",
-  "contact_subtitle": "Entrez en contact ici.",
-  "form_label_firstname": "Prénom",
-  "form_label_lastname": "Nom",
-  "form_label_email": "Email",
-  "form_label_phone": "Téléphone",
-  "form_label_subject": "Sujet",
-  "form_label_message": "Message",
-  "form_placeholder_phone": "+33 0 00 00 00",
-  "form_max_chars": "Max. 500 caractères",
-  "form_label_message_placeholder": "Votre message ici",
-  "form_optional": "Optionnel",
-  "form_btn_submit": "Envoyons un message..",
-  "form_ai_note": "💡 Note : Cette soumission de formulaire est traitée par un modèle NLP léger pour classer automatiquement le sujet du message, démontrant un déploiement pratique de Machine Learning.",
-
-  "status_sending": "Envoi en cours...",
-  "form_success_message": "Message envoyé avec succès !",
-  "form_error_message": "Une erreur s'est produite. Veuillez réessayer plus tard.",
-
   "portfolio": {
     "title": "Portfolio de Projets IA & Tech",
     "subtitle": "Découvrez mes créations. Le score de pertinence IA (simulé) est affiché pour mettre en avant les projets les plus techniques.",
@@ -47,6 +28,10 @@
         "title": "Analyse de Données de Crashs Aériens",
         "teaser": "Le projet met en valeur les compétences en manipulation de données, visualisation interactive et clustering. Compétences en analyse de données mises en avant."
       },
+      "mood": {
+                "title": "MoodMatch : Plateforme Sociale Basée sur le Humeur",
+                "teaser": "MoodMatch est une plateforme sociale qui connecte les utilisateurs en fonction de leur humeur actuelle, leur permettant de partager des expériences et de s'entraider à travers des interactions basées sur l'humeur."
+            },
       "three": {
         "title": "Site Portfolio 3D d'Anniversaire",
         "teaser": "Portfolio interactif utilisant Three.js et Vite. Projet de développement Web 3D."

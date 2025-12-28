@@ -2,6 +2,7 @@ import React from "react";
 import three from "../assets/portfolio/three.png";
 import mitch from "../assets/portfolio/mitch.png";
 import code from "../assets/portfolio/co.png";
+import mood from "../assets/portfolio/Screen.png";
 import crash from "../assets/portfolio/crashes.png";
 import piston from "../assets/portfolio/piston.png";
 import akothImage from "../assets/portfolio/Akoth.png";
@@ -64,6 +65,15 @@ const Portfolio = () => {
         },
         {
             id: 3,
+            src: mood, 
+            title: t('portfolio.projects.mood.title'),
+            teaser: t('portfolio.projects.mood.teaser'),
+            techStack: ["React/Vite", "Firebase", "Tailwind CSS"],
+            href: "https://mooodmatch.netlify.app/",
+            code: "https://github.com/Charlotte-Natasha/MoodMatch",
+        },
+        {
+            id: 4,
             src: three, 
             title: t('portfolio.projects.three.title'),
             teaser: t('portfolio.projects.three.teaser'),
@@ -72,7 +82,7 @@ const Portfolio = () => {
             code: "https://github.com/Charlotte-Natasha/3D-portfolio",
         },
         {
-            id: 4,
+            id: 5,
             src: code, 
             title: t('portfolio.projects.codehub.title'),
             teaser: t('portfolio.projects.codehub.teaser'),
@@ -81,7 +91,7 @@ const Portfolio = () => {
             code: "https://github.com/Charlotte-Natasha/CodeHub",
         },
         {
-            id: 5,
+            id: 6,
             src: mitch, 
             title: t('portfolio.projects.michelle.title'),
             teaser: t('portfolio.projects.michelle.teaser'),
