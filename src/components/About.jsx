@@ -11,7 +11,7 @@ const About = () => {
     };
 
     return (
-    <div name='about' className='w-full pt-8 pb-8 bg-gradient-to-b from-pink-900 to-black text-pink-50 flex flex-col justify-center items-center'>
+    <div name='about' className='w-full pt-8 pb-8 bg-gradient-to-b from-pink-900/70 to-black/70 text-pink-50 flex flex-col justify-center items-center'>
         
         {/* === LANGUAGE SWITCHER BUTTONS */}
         <div className="absolute top-4 right-4 space-x-2">

@@ -1,207 +1,83 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import { Download, Mail, Calendar } from 'lucide-react';
 
 const Contact = () => {
-  const { t } = useTranslation();
-  // State to track the form submission status: null, 'sending', 'success', 'error'
-  const [status, setStatus] = useState(null); 
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('sending'); // Set status to show loading/processing
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    // CRUCIAL: Serialize data for Netlify's endpoint
-    const encoded = new URLSearchParams(data).toString();
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encoded,
-      });
-
-      // Netlify often returns status 204 (No Content) for successful AJAX submissions
-      if (response.status === 200 || response.status === 204) {
-        setStatus('success'); 
-        form.reset(); // Clear the form
-        // Reset status after a few seconds
-        setTimeout(() => setStatus(null), 5000); 
-      } else {
-        setStatus('error');
-        console.error("Netlify submission failed with status:", response.status);
-      }
-    } catch (error) {
-      setStatus('error');
-      console.error("Form submission error:", error);
-    }
-  };
-
-
   return (
     <div
       name="contact"
-      className="w-full bg-gradient-to-b from-black via-black to-pink-900 py-12"
+      className="w-full min-h-screen relative bg-black/70 text-white overflow-hidden"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center">
-        <div className="pb-2 text-pink-100">
-          <p className="text-4xl font-bold inline border-b-4 border-pink-500">
-            {t('contact_title')}
-          </p>
-          <p className="py-6">{t('contact_subtitle')}</p>
-        </div>
-
-        {/* AI FEATURE NOTE INTEGRATION */}
-        <div className='my-6 p-4 border-l-4 border-pink-500 bg-gray-900/50 rounded-r-lg'>
-            <p className='text-md text-gray-300 italic'>
-                {t('form_ai_note')}
-            </p>
-        </div>
-
-        {/* NETLIFY FORM CONFIGURATION */}
-        <form 
-          name="contact_form" 
-          method="POST" 
-          data-netlify="true"
-          onSubmit={handleSubmit} // <-- AJAX HANDLER
-          className="p-6"
-        >
+      {/* Content Overlay */}
+      <div className="relative z-10 w-full min-h-screen flex items-center justify-center px-4 py-16">
+        <div className="max-w-3xl w-full">
           
-          <input type="hidden" name="form-name" value="contact_form" />
-          <input type="text" name="bot-field" className="hidden" aria-hidden="true" /> 
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pink-100">
+          {/* Main Card */}
+          <div className="backdrop-blur-xl bg-black/40 border-2 border-pink-500/30 rounded-3xl p-8 md:p-10 shadow-2xl">
             
-            {/* First Name */}
-            <div className="flex flex-col">
-              <label htmlFor="first-name">{t('form_label_firstname')}</label>
-              <input
-                type="text"
-                id="first-name"
-                name="user_firstname"
-                placeholder={t('form_label_firstname')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-                autoComplete="given-name" // 💡 ADDED autocomplete
-              />
-            </div>
-            
-            {/* Last Name */}
-            <div className="flex flex-col">
-              <label htmlFor="last-name">{t('form_label_lastname')}</label>
-              <input
-                type="text"
-                id="last-name"
-                name="user_lastname"
-                placeholder={t('form_label_lastname')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-                autoComplete="family-name" // 💡 ADDED autocomplete
-              />
-            </div>
-            
-            {/* Email */}
-            <div className="flex flex-col">
-              <label htmlFor="email">{t('form_label_email')}</label>
-              <input
-                type="email"
-                id="email"
-                name="user_email"
-                placeholder="email@gmail.com"
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-                autoComplete="email" // 💡 ADDED autocomplete
-              />
-            </div>
-            
-            {/* Phone */}
-            <div className="flex flex-col">
-              <label htmlFor="phone">
-                <div className="flex justify-between">
-                  {t('form_label_phone')}
-                  <span className="opacity-75 text-pink-500 text-sm">{t('form_optional')}</span>
-                </div>
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="user_phone"
-                placeholder={t('form_placeholder_phone')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                autoComplete="tel" // 💡 ADDED autocomplete
-              />
-            </div>
-            
-            {/* Subject */}
-            <div className="flex flex-col col-span-2">
-              <label htmlFor="subject">{t('form_label_subject')}</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder={t('form_label_subject')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-              />
-            </div>
-            
-            {/* Message */}
-            <div className="flex flex-col col-span-2">
-              <label htmlFor="message">
-                <div className="flex justify-between">
-                  {t('form_label_message')}
-                  <span className="opacity-75 text-sm">{t('form_max_chars')}</span>
-                </div>
-              </label>
-              <textarea
-                maxLength="500"
-                rows="4"
-                id="message"
-                name="message"
-                placeholder={t('form_label_message_placeholder')}
-                className="form-input px-3 py-2 rounded-md border-2 bg-transparent text-pink-50 resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-              />
-            </div>
-          </div>
-          
-          {/* Submit Button & Status Messages */}
-          <div className="flex flex-col items-center py-4">
-            
-            {/* Conditional Button Text/Styling */}
-            <button
-              type="submit"
-              disabled={status === 'sending'} 
-              className={`
-                text-pink-100 cursor-pointer px-6 py-3 my-4 mx-auto flex items-center rounded-md duration-300 w-full md:w-fit
-                ${status === 'sending' 
-                    ? 'bg-gray-600 cursor-not-allowed' // Grey out while sending
-                    : 'bg-gradient-to-b from-pink-500 to-pink-900 hover:scale-105'
-                }
-              `}
-            >
-              {status === 'sending' ? t('form_btn_sending') : t('form_btn_submit')}
-            </button>
-
-            {/* In-Page Success Message (Will now display the correct translation) */}
-            {status === 'success' && (
-              <p className="text-center text-lg font-bold text-pink-900 mt-2">
-                {t('form_success_message')} 
+            {/* Header */}
+            <div className="text-center mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Let's Build Something Amazing
+              </h2>
+              <p className="text-lg text-gray-300">
+                Available for alternance • 1 week school / 2 weeks company
               </p>
-            )}
+              <div className="flex items-center justify-center gap-3 mt-4">
+                <span className="px-3 py-1.5 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-sm font-semibold">
+                  🟢 Available Now
+                </span>
+                <span className="px-3 py-1.5 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-semibold">
+                  📍 Montpellier, France
+                </span>
+              </div>
+            </div>
 
-            {/* In-Page Error Message */}
-            {status === 'error' && (
-              <p className="text-center text-lg font-bold text-pink-300 mt-2">
-                {t('form_error_message')} 
+            {/* Main CTA - Download CV */}
+            <div className="flex justify-center mb-8">
+              <button className="group relative px-10 py-4 bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/50 overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></span>
+                <span className="relative flex items-center gap-3">
+                  <Download className="w-6 h-6" />
+                  Download My CV
+                </span>
+              </button>
+            </div>
+
+            {/* What I'm Looking For */}
+            <div className="border-t-2 border-pink-700/30 pt-8">
+              <h3 className="text-xl font-bold text-center mb-6 text-pink-300">
+                What I'm Looking For
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="text-center p-4 bg-gradient-to-b from-pink-900/10 to-transparent rounded-xl border border-pink-700/20">
+                  <div className="text-3xl mb-2">🤖</div>
+                  <h4 className="font-bold text-white mb-1.5 text-sm">AI & ML Projects</h4>
+                  <p className="text-xs text-gray-400">Building intelligent systems and predictive models</p>
+                </div>
+
+                <div className="text-center p-4 bg-gradient-to-b from-purple-900/10 to-transparent rounded-xl border border-purple-700/20">
+                  <div className="text-3xl mb-2">📊</div>
+                  <h4 className="font-bold text-white mb-1.5 text-sm">Data Analysis</h4>
+                  <p className="text-xs text-gray-400">Extracting insights from complex datasets</p>
+                </div>
+
+                <div className="text-center p-4 bg-gradient-to-b from-pink-900/10 to-transparent rounded-xl border border-pink-700/20">
+                  <div className="text-3xl mb-2">🚀</div>
+                  <h4 className="font-bold text-white mb-1.5 text-sm">Innovation</h4>
+                  <p className="text-xs text-gray-400">Solving real-world problems with tech</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Fun Fact */}
+            <div className="mt-6 text-center">
+              <p className="text-xs text-gray-500 italic">
+                💡 Fun fact: This background is procedurally generated—refresh the page for a new pattern!
               </p>
-            )}
+            </div>
 
           </div>
-          
-        </form>
+        </div>
       </div>
     </div>
   );

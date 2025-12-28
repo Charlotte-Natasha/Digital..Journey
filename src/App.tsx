@@ -5,11 +5,14 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Socials from "./components/Socials";
-import { LanguageProvider } from "./translation/language/LanguageContext.jsx"; // import provider
+import { LanguageProvider } from "./translation/language/LanguageContext.jsx"; 
+import BackgroundParticles from "./extra/Background.jsx";
 
 function App() {
   return (
-    <LanguageProvider>
+    <BackgroundParticles>
+      
+      <LanguageProvider>
       <div className="scroll-smooth">
         <Navbar />
         <Home />
@@ -20,6 +23,9 @@ function App() {
         <Socials />
       </div>
     </LanguageProvider>
+    
+    </BackgroundParticles>
+    
   );
 }
 

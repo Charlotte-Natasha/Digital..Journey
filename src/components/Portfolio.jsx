@@ -97,7 +97,7 @@ const Portfolio = () => {
         <div
             id="portfolio"
             name="portfolio"
-            className="w-full pt-16 pb-16 bg-gradient-to-b from-black via-black to-pink-900 text-pink-50"
+            className="w-full pt-16 pb-16 bg-gradient-to-b from-black/70 via-black/70 to-pink-900/70 text-pink-50/70"
         >
             <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full px-4 md:px-6 lg:px-8">
                 <div className="pb-6 md:pb-8">
